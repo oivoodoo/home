@@ -1,0 +1,7 @@
+h1 High Scores
+ul#scores-list
+  - for (var d in scores)
+    li
+      =scores[d].username
+      :
+      =scores[d].scores
