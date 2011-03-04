@@ -22,6 +22,13 @@ app.configure('production', function() {
   app.set('db-uri', 'mongodb://localhost/own-development');
 });
 
+app.dynamicHelpers({
+    messages: require('express-messages')
+});
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+
 app.configure(function() {
   app.set('views', __dirname + '/views');
   app.use(express.favicon());
@@ -51,10 +58,11 @@ require("./models/score")(mongoose,  function() {
     app.Score = mongoose.model("Score");
 });
 
-require('./routes/application');
+require('./routes/application')(app);
+require('./routes/posts')(app);
 
 if (!module.parent) {
-  app.listen(process.env.PORT || 80);
+  app.listen(process.env.PORT || 3000);
   console.log('Express server listening on port %d, environment: %s', app.address().port, app.settings.env)
   console.log('Using Express %s, Jade %s', express.version, jade.version);
 }

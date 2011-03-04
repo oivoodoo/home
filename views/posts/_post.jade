@@ -1,0 +1,13 @@
+.post
+  h2
+    = post.title
+    a.edit(href='/post/' + post.id + '/edit') Edit
+
+  != messages()
+  // dates
+  p.date.created Created at #{post.createdAt}
+  - if (post.updatedAt)
+    p.date.updated Updated at #{post.updatedAt}
+
+  // content
+  pre.content= post.content

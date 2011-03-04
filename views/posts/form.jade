@@ -1,0 +1,18 @@
+- if (post.title)
+  h1 Editing #{post.title}
+- else
+  h1 New Post
+
+!= messages()
+
+form#post(action='/posts/' + (post.title ? '/' + post.id : ''), method='post')
+  - if (post.title)
+    input(type='hidden', name='_method', value='put')
+  p
+    label(for='post[title]') Title:
+    input(type='text', name='post[title]', value=post.title)
+  p
+    label(for='post[content]') Body:
+    textarea(name='post[content]')= post.content || ''
+  p
+    input(type='submit', value=post.title ? 'Update' : 'Create')

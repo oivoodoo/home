@@ -4,7 +4,8 @@ module.exports = function(mongoose, func) {
     Post = new Schema({
         'title': String,
         'content': String,
-        'date': Date
+        'createdAt': Date,
+        'updatedAt': Date
     });
 
     mongoose.model('Post', Post);
