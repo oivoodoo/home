@@ -1,7 +1,8 @@
 module.exports = function(app) {
     var Score = app.Score;
+    var Post = app.Post;
 
-    app.get('/:format?', function(req, res) {
+    app.get('/', function(req, res) {
         Post.find({}, function(err, posts) {
             res.render('index', {
                 locals:{

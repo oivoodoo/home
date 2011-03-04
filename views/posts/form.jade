@@ -5,7 +5,7 @@
 
 != messages()
 
-form#post(action='/posts/' + (post.title ? '/' + post.id : ''), method='post')
+form#post(action='/posts/' + (post.title ? post.id : ''), method='post')
   - if (post.title)
     input(type='hidden', name='_method', value='put')
   p

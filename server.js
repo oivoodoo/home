@@ -1,7 +1,5 @@
-require.paths.push('./projects')
-
 var sys = require('sys'),
-    express = require('express'),
+    express = require('express@1.0.7'),
     jade = require('jade'),
     app = module.exports = express.createServer(),
     mongoose = require('mongoose'),
@@ -26,11 +24,13 @@ app.dynamicHelpers({
     messages: require('express-messages')
 });
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.helpers({
+    helper: require('./helpers/application')
+});
 
 app.configure(function() {
   app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.bodyDecoder());
   app.use(express.cookieDecoder());
@@ -41,14 +41,6 @@ app.configure(function() {
   app.use(express.staticProvider(__dirname + '/public'));
 });
 
-function NotFound(msg) {
-  this.name = 'NotFound';
-  Error.call(this, msg);
-  Error.captureStackTrace(this, arguments.callee);
-}
-
-sys.inherits(NotFound, Error);
-
 db = mongoose.connect(app.set('db-uri'));
 
 require('./models/post')(mongoose, function() {
@@ -58,6 +50,7 @@ require("./models/score")(mongoose,  function() {
     app.Score = mongoose.model("Score");
 });
 
+require('./routes/errors')(app);
 require('./routes/application')(app);
 require('./routes/posts')(app);
 

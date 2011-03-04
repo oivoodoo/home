@@ -43,11 +43,15 @@ module.exports = function(app) {
         });
     });
 
-    app.put('/posts/', function(req, res, next) {
-        post.update(req.body.post, function(err) {
+
+    app.put('/posts/:post', function(req, res, next) {
+        req.post.title = req.body.post.title;
+        req.post.content = req.body.post.content;
+        req.post.updatedAt = new Date();
+        req.post.save(function(err) {
             if (err) next(err);
             req.flash("info", "Successfully updated post");
-            res.redirect('/posts/' + post.id);
+            res.redirect('/posts/' + req.post.id);
         });
     });
 
