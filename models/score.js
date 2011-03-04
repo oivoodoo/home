@@ -1,6 +1,4 @@
-var Score;
-
-function defineModels(mongoose, func) {
+module.exports = function(mongoose, func) {
     var Schema = mongoose.Schema;
 
     Score = new Schema({
@@ -12,5 +10,3 @@ function defineModels(mongoose, func) {
 
     func();
 }
-
-exports.defineModels = defineModels;
