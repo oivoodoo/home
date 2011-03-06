@@ -3,11 +3,11 @@ var basicAuth = require("express").basicAuth;
 module.exports = function(app) {
     var Post = app.Post;
 
-    app.all('/posts/(/*)?', basicAuth(function(user, password) {
+    app.all('/posts(/*)?', basicAuth(function(user, password) {
         return user == 'admin' && password == 'admin';
-    }))
+    }));
 
-    app.routes.param('post', function(req, res, next, id){
+    app.param('post', function(req, res, next, id){
         if (id != null) {
             Post.findOne({_id: id}, function(err, post) {
                 if (err) return next(err);
@@ -18,21 +18,28 @@ module.exports = function(app) {
         }
     });
 
+    app.get('/posts', function(req, res, next) {
+        Post.find({}, function(err, posts) {
+            if (err) return next(err);
+            res.render('posts/index', {
+                posts: posts
+            });
+        });
+    });
+
+
     app.get('/posts/new', function(req, res, next) {
         res.render('posts/form', {
-            locals: {
-                post: {}
-            }
+            post: {}
         });
     });
 
     app.get('/posts/:post/edit', function(req, res, next){
         res.render('posts/form', {
-            locals: {
-                post: req.post
-            }
+            post: req.post
         })
     });
+
 
     app.post('/posts/', function(req, res, next){
         var post = new Post(req.body.post);
@@ -42,7 +49,6 @@ module.exports = function(app) {
             res.redirect('/posts/' + post.id);
         });
     });
-
 
     app.put('/posts/:post', function(req, res, next) {
         req.post.title = req.body.post.title;
@@ -57,20 +63,7 @@ module.exports = function(app) {
 
     app.get('/posts/:post?', function(req, res, next){
         res.render('posts/show', {
-            locals: {
-                post: req.post
-            }
-        });
-    });
-
-    app.get('/posts/', function(req, res, next) {
-        Post.find({}, function(err, posts) {
-            if (err) return next(err);
-            res.render('posts/index', {
-                locals:{
-                    posts: posts
-                }
-            });
+            post: req.post
         });
     });
 }
