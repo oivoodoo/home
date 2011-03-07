@@ -5,7 +5,8 @@ var sys = require('sys'),
     mongoose = require('mongoose'),
     mongoStore = require('connect-mongodb'),
     db,
-    Settings = { development: {}, test: {}, production: {} };
+    Settings = { development: {}, test: {}, production: {} },
+    property = require('./helpers/property');
 
 var app = module.exports = express.createServer(
     connect.cookieParser(),
@@ -32,7 +33,10 @@ app.configure('production', function() {
 });
 
 app.dynamicHelpers({
-    messages: require('express-messages')
+    messages: require('express-messages'),
+    admin_menu: function() {
+        return property.create("Dashboard");
+    }
 });
 
 app.helpers({

@@ -9,7 +9,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
       #header
         h2= 'My Admin Area'
         #topmenu
-          != admin.topMenu([["Dashboard", "/admin/"], ["Posts", "/admin/posts/"]])
+          != admin.topMenu([["Dashboard", "/admin/"], ["Posts", "/admin/posts/"]], admin_menu.get())
         #wrapper
           #content
             != body 
