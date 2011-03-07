@@ -36,7 +36,8 @@ app.dynamicHelpers({
 });
 
 app.helpers({
-    helper: require('./helpers/application')
+    helper: require('./helpers/application'),
+    admin: require('./helpers/admin')
 });
 
 app.configure(function() {
@@ -56,7 +57,8 @@ require("./models/score")(mongoose,  function() {
 });
 
 require('./routes/application')(app);
-require('./routes/posts')(app);
+require('./routes/admin')(app);
+require('./routes/admin/posts')(app);
 require('./routes/errors')(app);
 
 if (!module.parent) {

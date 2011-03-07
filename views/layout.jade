@@ -2,10 +2,10 @@
 html
   head
     title= 'High Scores'
-    link(rel='stylesheet', href='/stylesheets/styles.css')
+    != helper.style('styles')
   body
     #page
       #page_inner
         #container.shadow
           != body
-    script(type='text/javascript', src='/scripts/application.js')
+    != helper.script('application')

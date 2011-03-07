@@ -1,0 +1,22 @@
+!= messages()
+
+.box
+  h3= 'Posts'
+  table
+    thead
+      th= 'Title'
+      th(width='80px')= 'Created At'
+      th(width='60px')= 'Action'
+    tbody
+      - each post in posts
+        tr
+          td= post.title
+          td= helper.formatDate(post.createdAt)
+          td
+            a(href='#')
+              img(src='/images/admin/icons/user.png', alt='show')
+            a(href='#')
+              img(src='/images/admin/icons/user_edit.png', alt='edit')
+            a(href='#')
+              img(src='/images/admin/icons/user_delete.png', alt='delete')
+

@@ -5,7 +5,7 @@
 
 != messages()
 
-form#post(action='/posts/' + (post.title ? post.id : ''), method='post')
+form#post(action='/admin/posts/' + (post.title ? post.id : ''), method='post')
   - if (post.title)
     input(type='hidden', name='_method', value='put')
   p
@@ -16,4 +16,4 @@ form#post(action='/posts/' + (post.title ? post.id : ''), method='post')
     textarea(name='post[content]')= post.content || ''
   p
     input(type='submit', value=post.title ? 'Update' : 'Create')
-    a(href='/posts/') or cancel
+    a(href='/admin/posts/') or cancel
