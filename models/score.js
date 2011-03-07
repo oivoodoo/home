@@ -6,7 +6,7 @@ module.exports = function(mongoose, func) {
         'scores': {type: Number, default: 0}
     })
 
-    mongoose.model('Score', Score);
+    mongoose.model('score', Score);
 
     func();
 }

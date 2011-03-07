@@ -54,10 +54,10 @@ app.configure(function() {
 db = mongoose.connect(app.set('db-uri'));
 
 require('./models/post')(mongoose, function() {
-    app.Post = mongoose.model("Post");
+    app.Post = mongoose.model("post");
 });
 require("./models/score")(mongoose,  function() {
-    app.Score = mongoose.model("Score");
+    app.Score = mongoose.model("score");
 });
 
 require('./routes/application')(app);

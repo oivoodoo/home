@@ -2,8 +2,11 @@
 
 != messages()
 
-.box
-  h3= 'Posts'
+#rightnow
+  h3.reallynow 
+    span Posts
+    a(href='/admin/posts/new', class='add') Add New Post
+    br
   table
     thead
       th= 'Title'
@@ -15,10 +18,7 @@
           td= post.title
           td= helper.formatDate(post.createdAt)
           td
-            a(href='#')
+            a(href='/admin/posts/' + post.id)
               img(src='/images/admin/icons/user.png', alt='show')
-            a(href='#')
+            a(href='/admin/posts/' + post.id + '/edit')
               img(src='/images/admin/icons/user_edit.png', alt='edit')
-            a(href='#')
-              img(src='/images/admin/icons/user_delete.png', alt='delete')
-

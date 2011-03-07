@@ -1,19 +1,21 @@
-- if (post.title)
-  h1 Editing #{post.title}
-- else
-  h1 New Post
+!= helper.editor()
+
+- admin_menu.set('Posts')
 
 != messages()
 
-form#post(action='/admin/posts/' + (post.title ? post.id : ''), method='post')
+#box
   - if (post.title)
+    h3 Editing #{post.title}
+  - else
+    h3 New Post
+
+  form#form(action='/admin/posts/' + (post.title ? post.id : ''), method='post')
     input(type='hidden', name='_method', value='put')
-  p
     label(for='post[title]') Title:
     input(type='text', name='post[title]', value=post.title)
-  p
+    br
     label(for='post[content]') Body:
-    textarea(name='post[content]')= post.content || ''
-  p
+    textarea(name='post[content]', class='html')= post.content || ''
     input(type='submit', value=post.title ? 'Update' : 'Create')
-    a(href='/admin/posts/') or cancel
+    a(href='/admin/posts/', id='button2') or cancel

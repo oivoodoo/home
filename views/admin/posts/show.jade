@@ -1,6 +1,10 @@
+- admin_menu.set('Posts')
+
 != helper.script('highlight.pack')
 != helper.style('default')
 script(type='text/javascript')
   | hljs.initHighlightingOnLoad();
 
-!= partial('post', [post])
+#box
+  != partial('post', [post])
+  a(href="/admin/posts/") Back

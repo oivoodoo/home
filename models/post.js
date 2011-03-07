@@ -16,7 +16,7 @@ module.exports = function(mongoose, func) {
         return c.length > 0;
     }, "content can't be empty");
 
-    mongoose.model('Post', Post);
+    mongoose.model('post', Post);
 
     func();
 }

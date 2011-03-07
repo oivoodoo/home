@@ -27,6 +27,7 @@ select{
 #topmenu a,#topmenu a:visited{
 	color:#FFF;
 	background:#7e9dcc;
+  margin-right: 2px;
 }
 #topmenu a:hover{
 	color: #FFF;
@@ -77,10 +78,6 @@ form#form legend {
 form#form input {
 	border:1px solid #d9e6f0;
 	background:#fff url(/images/admin/form_blue.gif) repeat-x top left;
-}
-form#form textarea {
-	border:1px solid #d9e6f0;
-	background:#fff url(/images/admin/form_blue.gif) repeat-x bottom left;
 }
 form#form option {
 	background:#FFF;

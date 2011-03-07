@@ -1,9 +1,6 @@
 .post
-  h2
-    span.title= post.title
-    a.edit(href='/admin/posts/' + post.id + '/edit') Edit
+  h3= post.title
 
-  != messages()
   p.datetime.created Created at #{helper.formatDate(post.createdAt)}
   - if (post.updatedAt)
     p.datetime.updated Updated at #{helper.formatDate(post.updatedAt)}
