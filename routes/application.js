@@ -40,4 +40,16 @@ module.exports = function(app) {
         }
       }).limit(13).sort('scores', -1);
     });
+
+    app.get('/about', function(req, res, next){
+        res.render('about');
+    });
+
+    app.get('/projects', function(req, res, next){
+        res.render('projects');
+    });
+
+    app.get('/contacts', function(req, res, next){
+        res.render('contacts');
+    });
 }

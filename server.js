@@ -35,7 +35,10 @@ app.configure('production', function() {
 app.dynamicHelpers({
     messages: require('express-messages'),
     admin_menu: function() {
-        return property.create("Dashboard");
+      return property.create("Dashboard");
+    },
+    home_menu: function() {
+      return property.create("Home");
     }
 });
 

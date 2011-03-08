@@ -1,0 +1,3 @@
+[submodule "public/jwysiwyg"]
+    path = public/jwysiwyg
+    url = git@github.com:akzhan/jwysiwyg.git
