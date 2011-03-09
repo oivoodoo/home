@@ -1,16 +1,18 @@
 var sys = require('sys'),
-    express = require('express@2.0.0beta'),
+    express = require('express@2.0.0beta2'),
     jade = require('jade'),
-    connect = require('connect@1.0.3'),
+    connect = require('connect@1.0.4'),
     mongoose = require('mongoose'),
     mongoStore = require('connect-mongodb'),
     db,
     Settings = { development: {}, test: {}, production: {} },
     property = require('./helpers/property');
 
+var config = require('./config/assets');
+
 var app = module.exports = express.createServer(
     connect.cookieParser(),
-    connect.static(__dirname + '/public'),
+    connect.static(config.root),
     connect.bodyParser(),
     connect.methodOverride(),
     connect.favicon(),
