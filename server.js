@@ -8,16 +8,30 @@ var sys = require('sys'),
     Settings = { development: {}, test: {}, production: {} },
     property = require('./helpers/property');
 
-var config = require('./config/assets');
+var root = __dirname + '/public';
+
+var config = require('./config/assets').config;
 
 var app = module.exports = express.createServer(
-    connect.cookieParser(),
-    connect.static(config.root),
-    connect.bodyParser(),
-    connect.methodOverride(),
-    connect.favicon(),
-    connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
+     connect.cookieParser()
+    , config.assets
+    , connect.static(root)
+    , connect.bodyParser()
+    , connect.methodOverride()
+    , connect.favicon()
+    , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
 );
+
+process.addListener('uncaughtException', function (err, stack) {
+    console.log(err);
+    console.log(stack);
+    log('*************************************');
+    log('************EXCEPTION****************');
+    log('*************************************');
+    err.message && log(err.message);
+    err.stack && log(err.stack);
+    log('*************************************');
+});
 
 app.mongoose = mongoose;
 
@@ -41,6 +55,9 @@ app.dynamicHelpers({
     },
     home_menu: function() {
       return property.create("Home");
+    },
+    assets: function(res, req) { 
+      return config.assets.cacheTimestamps;
     }
 });
 

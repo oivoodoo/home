@@ -1,42 +1,48 @@
 var assetManager = require('connect-assetmanager')
-  , assetHandler = require('connect-assetmanager-handlers')
-  , root = __dirname + "/public";
+    , assetHandler = require('connect-assetmanager-handlers')
 
-var sys = require ('sys')
-console.log(sys.puts(__dirname));
-
-var assets = assetManager({
+var assetsConfig = {
     'css': {
-      'route': /\/static\/css\/[0-9]+\/.*\.css/
-      , 'path': './public/css/'
+      'route': /\/static\/stylesheets\/[0-9]+\.*\.css/
+      , 'path': './public/stylesheets/'
       , 'dataType': 'css'
       , 'files': [
-        'reset.css'
-        , 'client.css'
+        '960.css'
+        , 'screen.css'
+        , 'print.css'
+        , 'project.css'
       ]
-    , 'preManipulate': {
-      '^': [
-          assetHandler.fixVendorPrefixes
-        , assetHandler.fixGradients
-        , assetHandler.replaceImageRefToBase64(root)
+      , 'preManipulate': {
+        '^': [
+            assetHandler.fixVendorPrefixes
+          , assetHandler.fixGradients
+          , assetHandler.replaceImageRefToBase64(root)
         ]
       }
     }
   , 'js': {
-        'route': /\/static\/js\/[0-9]+\/.*\.js/
-      , 'path': './public/js/'
+        'route': /\/static\/scripts\/[0-9]+\.*\.js/
+      , 'path': './public/scripts/'
       , 'dataType': 'javascript'
       , 'files': [
-        'jquery.js'
-      , 'jquery.client.js'
+        'http://code.jquery.com/jquery-1.4.2.min.js'
+        , 'scripts.js'
+        , 'coda-slider.1.1.1.js'
+        , 'jquery-easing-compatibility.1.2.pack.js'
+        , 'jquery-easing.1.2.pack.js'
       ]
-    , 'postManipulate': {
+      , 'postManipulate': {
         '^': [
             assetHandler.uglifyJsOptimize
         ]
       }
     }
-});
+};
 
-exports.assetsManagerMiddleware = assetManager(assets);
+var assets = {
+  handler: function() {
+    return assetManager(assetsConfig);
+  }
+};
 
+exports.config = { assets: assets.handler() };
