@@ -3,7 +3,7 @@ var assetManager = require('connect-assetmanager')
 
 var assetsConfig = {
     'css': {
-      'route': /\/static\/stylesheets\/[0-9]+\.*\.css/
+      'route': /\/stylesheets\/[0-9]+\.*\.css/
       , 'path': './public/stylesheets/'
       , 'dataType': 'css'
       , 'files': [
@@ -21,7 +21,7 @@ var assetsConfig = {
       }
     }
   , 'js': {
-        'route': /\/static\/scripts\/[0-9]+\.*\.js/
+        'route': /\/scripts\/[0-9]+\.*\.js/
       , 'path': './public/scripts/'
       , 'dataType': 'javascript'
       , 'files': [
