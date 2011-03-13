@@ -2,16 +2,8 @@
 html
   head
     title Alexander Korsak Home Site
-    != helper.styles()
+    != helper.styles(assets)
   body
-    .container_12
-      div(class="grid_4 header")
-        a(href='/')
-          img(src='/images/logo.gif', alt='Alexander Korsak Home Page')
-      div(class='grid_8 header')
-        #navigation
-          != helper.topMenu([['Home', '/', 'home'], ['About', '/about', 'about'], ['Projects', '/projects', 'portfolio'], ['Contacts', '/contacts', 'contact']], home_menu.get())
-      .clear
-    div(class='container_12 medium')
-      != body
-    != helper.scripts()
+    != helper.topMenu([['Home', '/', 'home'], ['About', '/about', 'about'], ['Projects', '/projects', 'projects'], ['Contacts', '/contacts', 'contacts']], home_menu.get())
+    != body
+    != helper.scripts(assets)

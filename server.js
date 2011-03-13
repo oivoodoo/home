@@ -1,19 +1,24 @@
-var sys = require('sys'),
-    express = require('express@2.0.0beta2'),
-    jade = require('jade'),
-    connect = require('connect@1.0.4'),
-    mongoose = require('mongoose'),
-    mongoStore = require('connect-mongodb'),
-    db,
-    Settings = { development: {}, test: {}, production: {} },
-    property = require('./helpers/property');
+var sys = require('sys')
+    , express = require('express@2.0.0beta2')
+    , jade = require('jade')
+    , connect = require('connect@1.0.4')
+    , mongoose = require('mongoose')
+    , mongoStore = require('connect-mongodb')
+    , db
+    , property = require('./helpers/property')
+    , stylus = require('stylus');
 
 var root = __dirname + '/public';
 
-var config = require('./config/assets').config;
+var config = require('./config/config').config;
 
 var app = module.exports = express.createServer(
      connect.cookieParser()
+    , stylus.middleware({
+        src: __dirname + '/public/stylus'
+        , dest: __dirname + '/public/stylesheets'
+        , compile: config.compile
+      })
     , config.assets
     , connect.static(root)
     , connect.bodyParser()

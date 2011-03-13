@@ -1,5 +1,6 @@
 var assetManager = require('connect-assetmanager')
     , assetHandler = require('connect-assetmanager-handlers')
+    , stylus = require('stylus');
 
 var assetsConfig = {
     'css': {
@@ -7,10 +8,7 @@ var assetsConfig = {
       , 'path': './public/stylesheets/'
       , 'dataType': 'css'
       , 'files': [
-        '960.css'
-        , 'screen.css'
-        , 'print.css'
-        , 'project.css'
+        'styles.css'
       ]
       , 'preManipulate': {
         '^': [
@@ -25,11 +23,7 @@ var assetsConfig = {
       , 'path': './public/scripts/'
       , 'dataType': 'javascript'
       , 'files': [
-        'http://code.jquery.com/jquery-1.4.2.min.js'
-        , 'scripts.js'
-        , 'coda-slider.1.1.1.js'
-        , 'jquery-easing-compatibility.1.2.pack.js'
-        , 'jquery-easing.1.2.pack.js'
+        'application.js'
       ]
       , 'postManipulate': {
         '^': [
@@ -43,6 +37,13 @@ var assets = {
   handler: function() {
     return assetManager(assetsConfig);
   }
+};
+
+function compile(str, path, fn) {
+  stylus(str)
+    .set('filename', path)
+    .set('compress', true)
+    .render(fn);
 };
 
 exports.config = { assets: assets.handler() };

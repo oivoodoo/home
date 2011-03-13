@@ -35,20 +35,12 @@ module.exports.editor = function() {
       '<script type="text/javascript">$(function() {$("textarea.html").wysiwyg({controls: {html: {visible: true}}});});</script>';
 };
 
-module.exports.styles = function() {
-  return module.exports.style('960', {media: 'screen, projection'}) + 
-    module.exports.style('screen', {media: 'screen, projection'}) + 
-    module.exports.style('print', {media: 'print'}) + 
-    module.exports.style('project', {media: 'screen, projection'}) + 
-    '<!--[if IE]>' + module.exports.style('ie') + '<![endif]-->';
+module.exports.styles = function(assets) {
+  return exports.style(assets.css);
 };
 
-module.exports.scripts = function() {
-  return module.exports.jquery() + 
-      module.exports.script('scripts') +
-      module.exports.script('coda-slider.1.1.1') + 
-      module.exports.script('jquery-easing-compatibility.1.2.pack') +
-      module.exports.script('jquery-easing.1.2.pack');
+module.exports.scripts = function(assets) {
+  return exports.script(assets.js);
 };
 
 module.exports.topMenu = function(actions, current) {
@@ -58,5 +50,4 @@ module.exports.topMenu = function(actions, current) {
   }
   html += "</ul>";
   return html;
-
 };
