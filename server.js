@@ -12,11 +12,13 @@ var root = __dirname + '/public';
 
 var config = require('./config/config').config;
 
+console.log(sys.inspect(config.compile));
+
 var app = module.exports = express.createServer(
      connect.cookieParser()
     , stylus.middleware({
         src: __dirname + '/public/stylus'
-        , dest: __dirname + '/public/stylesheets'
+        , dest: __dirname + '/public'
         , compile: config.compile
       })
     , config.assets

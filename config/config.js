@@ -46,4 +46,8 @@ function compile(str, path, fn) {
     .render(fn);
 };
 
-exports.config = { assets: assets.handler() };
+exports.config = { 
+  assets: assets.handler()
+  , compile: compile
+};
+
