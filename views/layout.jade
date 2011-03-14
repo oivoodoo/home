@@ -2,7 +2,7 @@
 html
   head
     title Alexander Korsak Home Site
-    != helper.styles(assets)
+    != helper.style('styles')
   body
     != helper.topMenu([['Home', '/', 'home'], ['About', '/about', 'about'], ['Projects', '/projects', 'projects'], ['Contacts', '/contacts', 'contacts']], home_menu.get())
     != body

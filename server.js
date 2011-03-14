@@ -12,14 +12,19 @@ var root = __dirname + '/public';
 
 var config = require('./config/config').config;
 
-console.log(sys.inspect(config.compile));
+function compile(str, path, fn) {
+  stylus(str)
+    .set('filename', path)
+    .set('compress', true)
+    .render(fn);
+}
 
 var app = module.exports = express.createServer(
      connect.cookieParser()
     , stylus.middleware({
         src: __dirname + '/public/stylus'
         , dest: __dirname + '/public'
-        , compile: config.compile
+        , compile: compile
       })
     , config.assets
     , connect.static(root)
