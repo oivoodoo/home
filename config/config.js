@@ -7,7 +7,9 @@ var assetsConfig = {
       , 'path': './public/scripts/'
       , 'dataType': 'javascript'
       , 'files': [
-        'application.js'
+        'jquery.min.js'
+        , 'class.horinaja.jquery.js'
+        , 'application.js'
       ]
       , 'postManipulate': {
         '^': [

@@ -3,19 +3,21 @@ html
   head
     title Alexander Korsak Home Site
     != helper.style('styles')
+    != helper.style('horinaja')
   body
     #page
       #page_inner
         #menu
           ul
             li.l1
-              a#new_button(href='#') Home
-            li.l1
-              a#new_button(href='#') Blog
+              a#new_button(href='/') Home
             li.l2
-              a#new_button(href='#') Projects
+              a#new_button(href='http://oivoodoo.tumblr.com/') Blog
             li.l3
-              a#new_button(href='#') Contacts
+              a#new_button(href='/projects') Projects
+            li.l4
+              a#new_button(href='/contacts') Contacts
+        .clearer
         #container
           != body
   != helper.scripts(assets)
