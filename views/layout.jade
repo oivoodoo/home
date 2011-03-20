@@ -4,6 +4,18 @@ html
     title Alexander Korsak Home Site
     != helper.style('styles')
   body
-    != helper.topMenu([['Home', '/', 'home'], ['About', '/about', 'about'], ['Projects', '/projects', 'projects'], ['Contacts', '/contacts', 'contacts']], home_menu.get())
-    != body
-    != helper.scripts(assets)
+    #page
+      #page_inner
+        #menu
+          ul
+            li.l1
+              a#new_button(href='#') Home
+            li.l1
+              a#new_button(href='#') Blog
+            li.l2
+              a#new_button(href='#') Projects
+            li.l3
+              a#new_button(href='#') Contacts
+        #container
+          != body
+  != helper.scripts(assets)

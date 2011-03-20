@@ -1,3 +1,13 @@
-body{font:14px helvetica,arial,sans-serif;padding:50px;}
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,font,img,ul,li{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline}
+body{font:12px Georgia,Verdana,Lucida Sans Unicode,sans-serif;line-height:1px;color:#999;background:url("/images/background.jpg") repeat;}
 body h1{font-size:50px}
 body p{margin:15px 0}
+#page{margin:0 auto;padding:20px}
+#page_inner{margin:0 auto;width:820px;}
+#page_inner #menu{width:400px;position:relative;top:10px;left:20px;z-index:80;}
+#page_inner #menu li{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);width:50px;overflow:hidden;margin:10px 0;padding:5px 5px 5px 18px;float:left;text-align:right}
+#page_inner #menu li.l1{backgroud:rgba(131,178,51,0.65)}
+#page_inner #menu li.l2{backgroud:rgba(196,89,30,0.65)}
+#page_inner #menu li.l3{backgroud:rgba(65,117,160,0.65)}
+#page_inner #menu li.l4{backgroud:rgba(65,117,160,0.65)}
+#page_inner #container{z-index:1000;margin-top:30px;padding:10px;min-height:320px;height:600px;backgroud:#fff;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 0 8px rgba(0,0,0,0.296875);-moz-box-shadow:0 0 8px rgba(0,0,0,0.296875);box-shadow:0 0 8px rgba(0,0,0,0.296875)}

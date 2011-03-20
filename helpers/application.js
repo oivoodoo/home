@@ -43,11 +43,3 @@ module.exports.scripts = function(assets) {
   return exports.script(assets.js);
 };
 
-module.exports.topMenu = function(actions, current) {
-  var html = "<ul id='nav'>";
-  for (var i = 0; i < actions.length; i++) {
-    html += "<li id='" + actions[i][2] + "'><a href='" + actions[i][1] + "'" + (current == actions[i][0] ? "class='currentPage'" : "") + "'>" + actions[i][0] + "</a></li>";
-  }
-  html += "</ul>";
-  return html;
-};
