@@ -13,3 +13,6 @@
 [submodule "modules/qs"]
 	path = modules/qs
 	url = git://github.com/visionmedia/node-querystring.git
+[submodule "modules/mime"]
+	path = modules/mime
+	url = https://github.com/bentomas/node-mime.git
