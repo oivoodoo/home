@@ -1,7 +1,9 @@
+require.paths.unshift('./modules/');
+
 var sys = require('sys')
-    , express = require('express@2.0.0beta2')
+    , express = require('express')
     , jade = require('jade')
-    , connect = require('connect@1.0.4')
+    , connect = require('connect')
     , mongoose = require('mongoose')
     , mongoStore = require('connect-mongodb')
     , db
@@ -37,12 +39,8 @@ var app = module.exports = express.createServer(
 process.addListener('uncaughtException', function (err, stack) {
     console.log(err);
     console.log(stack);
-    log('*************************************');
-    log('************EXCEPTION****************');
-    log('*************************************');
     err.message && log(err.message);
     err.stack && log(err.stack);
-    log('*************************************');
 });
 
 app.mongoose = mongoose;
@@ -81,11 +79,11 @@ app.helpers({
 app.configure(function() {
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.session({store: mongoStore(app.set('db-uri')), secret: '9FF96302-4633-11E0-AAE4-38FEDED72085'}))
+  // app.use(express.session({store: mongoStore(app.set('db-uri')), secret: '9FF96302-4633-11E0-AAE4-38FEDED72085'}))
   app.use(express.logger({ format: '\x1b[1m:method\x1b[0m \x1b[33m:url\x1b[0m :response-time ms' }))
 });
 
-db = mongoose.connect(app.set('db-uri'));
+/*db = mongoose.connect(app.set('db-uri'));
 
 require('./models/post')(mongoose, function() {
     app.Post = mongoose.model("post");
@@ -93,14 +91,14 @@ require('./models/post')(mongoose, function() {
 require("./models/score")(mongoose,  function() {
     app.Score = mongoose.model("score");
 });
-
+*/
 require('./routes/application')(app);
-require('./routes/admin')(app);
+/*require('./routes/admin')(app);
 require('./routes/admin/posts')(app);
-require('./routes/errors')(app);
+require('./routes/errors')(app);*/
 
 if (!module.parent) {
-  app.listen(process.env.PORT || 3000);
+  app.listen(process.env.C9_PORT || 3000);
   console.log('Express server listening on port %d, environment: %s', app.address().port, app.settings.env)
   console.log('Using Express %s, Jade %s', express.version, jade.version);
 }

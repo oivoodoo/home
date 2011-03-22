@@ -1,0 +1,6 @@
+[submodule "modules/express"]
+	path = modules/express
+	url = https://github.com/visionmedia/express.git
+[submodule "modules/connect-mongodb"]
+	path = modules/connect-mongodb
+	url = https://github.com/masylum/connect-mongodb.git
