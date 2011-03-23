@@ -7,7 +7,6 @@ var sys = require('sys')
     , mongoose = require('mongoose')
     , mongoStore = require('connect-mongodb')
     , db
-    , property = require('./helpers/property')
     , stylus = require('stylus');
 
 var config = require('./config/config').config;
@@ -27,27 +26,7 @@ var app = module.exports = express.createServer(
     // , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
 );
 
-process.addListener('uncaughtException', function (err, stack) {
-    console.log(err);
-    console.log(stack);
-    err.message && log(err.message);
-    err.stack && log(err.stack);
-});
-
 app.mongoose = mongoose;
-
-app.configure('development', function() {
-  app.set('db-uri', 'mongodb://admin:201287ali@flame.local.mongohq.com:27021/oivoodoo');
-  app.use(express.errorHandler({ dumpExceptions: true }));
-});
-
-app.configure('test', function() {
-  app.set('db-uri', 'mongodb://admin:201287ali@flame.local.mongohq.com:27021/oivoodoo');
-});
-
-app.configure('production', function() {
-  app.set('db-uri', 'mongodb://admin:201287ali@flame.local.mongohq.com:27021/oivoodoo');
-});
 
 app.configure(function() {
   app.set('views', __dirname + '/views');
@@ -56,8 +35,7 @@ app.configure(function() {
   app.use(express.logger({ format: '\x1b[1m:method\x1b[0m \x1b[33m:url\x1b[0m :response-time ms' }))
 });
 
-db = mongoose.connect(app.set('db-uri'));
-
+require('./config/db')(app);
 require('./helpers')(app);
 require('./models')(app);
 require('./routes')(app);
