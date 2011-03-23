@@ -30,10 +30,10 @@ var app = module.exports = express.createServer(
       })
     , config.assets
     , connect.static(root)
-    , connect.bodyParser()
-    , connect.methodOverride()
-    , connect.favicon()
-    , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
+    // , connect.bodyParser()
+    // , connect.methodOverride()
+    // , connect.favicon()
+    // , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
 );
 
 process.addListener('uncaughtException', function (err, stack) {
@@ -46,16 +46,16 @@ process.addListener('uncaughtException', function (err, stack) {
 app.mongoose = mongoose;
 
 app.configure('development', function() {
-  app.set('db-uri', 'mongodb://localhost/own-production');
+  app.set('db-uri', 'mongodb://admin:201287ali@flame.local.mongohq.com:27021/oivoodoo');
   app.use(express.errorHandler({ dumpExceptions: true }));
 });
 
 app.configure('test', function() {
-  app.set('db-uri', 'mongodb://localhost/own-test');
+  app.set('db-uri', 'mongodb://admin:201287ali@flame.local.mongohq.com:27021/oivoodoo');
 });
 
 app.configure('production', function() {
-  app.set('db-uri', 'mongodb://localhost/own-development');
+  app.set('db-uri', 'mongodb://admin:201287ali@flame.local.mongohq.com:27021/oivoodoo');
 });
 
 app.dynamicHelpers({
@@ -83,7 +83,7 @@ app.configure(function() {
   app.use(express.logger({ format: '\x1b[1m:method\x1b[0m \x1b[33m:url\x1b[0m :response-time ms' }))
 });
 
-/*db = mongoose.connect(app.set('db-uri'));
+db = mongoose.connect(app.set('db-uri'));
 
 require('./models/post')(mongoose, function() {
     app.Post = mongoose.model("post");
@@ -91,11 +91,11 @@ require('./models/post')(mongoose, function() {
 require("./models/score")(mongoose,  function() {
     app.Score = mongoose.model("score");
 });
-*/
+
 require('./routes/application')(app);
-/*require('./routes/admin')(app);
+require('./routes/admin')(app);
 require('./routes/admin/posts')(app);
-require('./routes/errors')(app);*/
+require('./routes/errors')(app);
 
 if (!module.parent) {
   app.listen(process.env.C9_PORT || 3000);

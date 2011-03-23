@@ -23,7 +23,7 @@ module.exports = function(app) {
     });
 
 
-    app.get('/admin/posts/new', function(req, res, next) {
+    app.get('/admin/posts/new(/)?', function(req, res, next) {
         res.render('admin/posts/form', {
             post: {},
             layout: 'admin'
@@ -38,7 +38,7 @@ module.exports = function(app) {
     });
 
 
-    app.post('/admin/posts/', function(req, res, next){
+    app.post('/admin/posts(/)?', function(req, res, next){
         var post = new Post(req.body.post);
         post.save(function(err) {
             if (err) return next(err);

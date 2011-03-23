@@ -34,3 +34,30 @@
 [submodule "modules/jade"]
 	path = modules/jade
 	url = git://github.com/visionmedia/jade.git
+[submodule "modules/connect-assetmanager"]
+	path = modules/connect-assetmanager
+	url = https://github.com/mape/connect-assetmanager.git
+[submodule "modules/connect-assetmanager-handlers"]
+	path = modules/connect-assetmanager-handlers
+	url = https://github.com/mape/connect-assetmanager-handlers.git
+[submodule "modules/request"]
+	path = modules/request
+	url = https://github.com/mikeal/request.git
+[submodule "modules/step"]
+	path = modules/step
+	url = https://github.com/creationix/step.git
+[submodule "modules/uglify-js"]
+	path = modules/uglify-js
+	url = https://github.com/mishoo/UglifyJS.git
+[submodule "modules/express-messages"]
+	path = modules/express-messages
+	url = https://github.com/visionmedia/express-messages.git
+[submodule "modules/date-utils"]
+	path = modules/date-utils
+	url = https://github.com/JerrySievert/node-date-utils.git
+[submodule "modules/node-markdown"]
+	path = modules/node-markdown
+	url = https://github.com/andris9/node-markdown.git
+[submodule "modules/nodemailer"]
+	path = modules/nodemailer
+	url = https://github.com/andris9/Nodemailer.git
