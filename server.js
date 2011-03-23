@@ -30,7 +30,7 @@ var app = module.exports = express.createServer(
       })
     , config.assets
     , connect.static(root)
-    // , connect.bodyParser()
+    , connect.bodyParser()
     // , connect.methodOverride()
     // , connect.favicon()
     // , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })

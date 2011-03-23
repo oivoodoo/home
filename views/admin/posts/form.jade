@@ -13,5 +13,6 @@
     br
     label(for='post[content]') Body:
     textarea(name='post[content]', class='html')= post.content || ''
+    br
     input(type='submit', value=post.title ? 'Update' : 'Create')
     a(href='/admin/posts/', id='button2') or cancel
