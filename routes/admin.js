@@ -8,8 +8,9 @@ module.exports = function(app) {
   }));
   
   app.all('/admin(/*)?', function(req, res, next) {
-    Resource.find({}, function(err) {
+    Resource.find({}, function(resources, err) {
       if (err) return next(err);
+      res.local('resources', resources);
       });
     });
 
