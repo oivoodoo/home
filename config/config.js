@@ -24,7 +24,7 @@ function compile(str, path, fn) {
     .set('filename', path)
     .set('compress', true)
     .render(fn);
-}
+};
 
 var assets = {
   handler: function() {
