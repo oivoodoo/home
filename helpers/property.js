@@ -1,5 +1,5 @@
-exports.create = function (v) {
-    var value = v;
+exports.create = function () {
+    var value = null;
     return {
         get: function() {
             return value;
