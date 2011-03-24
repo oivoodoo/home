@@ -9,9 +9,9 @@ module.exports = function(app) {
     , home_menu: function() {
       return property.create();
       }
-    , assets: function(res, req) {
-      console.log(app.config.assets);
-      return app.config.assets.cacheTimestamps;
+    , assets: function() {
+      console.log(app.config.assets.handler.cacheTimestamps);
+      return app.config.assets.handler.cacheTimestamps;
       }
   });
   

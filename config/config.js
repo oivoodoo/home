@@ -26,17 +26,10 @@ function compile(str, path, fn) {
     .render(fn);
 };
 
-var assets = {
-  handler: function() {
-    return assetManager(assetsConfig);
-  }
-  , compile: compile
-};
-
 exports.config = { 
   assets: { 
-    handler: assets.handler()
-    , compile: assets.compile
+    handler: assetManager(assetsConfig)
+    , compile: compile
   }
 };
 

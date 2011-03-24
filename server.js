@@ -19,15 +19,12 @@ var app = module.exports = express.createServer(
         , compile: config.assets.compile
       })
     , config.assets.handler
-    , connect.static(root)
+    , connect.static(__dirname + '/public')
     , connect.bodyParser()
-    // , connect.methodOverride()
-    // , connect.favicon()
+    , connect.methodOverride()
+    , connect.favicon()
     // , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
 );
-
-app.config = config;
-app.mongoose = mongoose;
 
 app.configure(function() {
   app.set('views', __dirname + '/views');
@@ -36,10 +33,13 @@ app.configure(function() {
   app.use(express.logger({ format: '\x1b[1m:method\x1b[0m \x1b[33m:url\x1b[0m :response-time ms' }))
 });
 
+app.config = config;
+app.mongoose = mongoose;
+
 require('./config/db')(app);
-require('./helpers')(app);
 require('./models')(app);
 require('./routes')(app);
+require('./helpers')(app);
 
 if (!module.parent) {
   app.listen(process.env.C9_PORT || 3000);

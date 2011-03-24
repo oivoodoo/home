@@ -23,18 +23,6 @@ module.exports.jquery = function() {
   return "<script type='text/javascript' src='http://code.jquery.com/jquery-1.4.2.min.js'></script>";
 };
 
-module.exports.editor = function() {
-  return module.exports.jquery() + 
-      '<script type="text/javascript" src="/jwysiwyg/jquery.wysiwyg.js"></script>' + 
-      '<script type="text/javascript" src="/jwysiwyg/controls/wysiwyg.image.js"></script>' + 
-      '<script type="text/javascript" src="/jwysiwyg/controls/wysiwyg.link.js"></script>' + 
-      '<script type="text/javascript" src="/jwysiwyg/controls/wysiwyg.table.js"></script>' +
-      '<link rel="stylesheet" href="/jwysiwyg/jquery.wysiwyg.css" type="text/css">' +
-      '<link rel="stylesheet" href="/jwysiwyg/jquery.wysiwyg.modal.css" type="text/css">' + 
-      '<link rel="stylesheet" href="/jwysiwyg/lib/jquery.simplemodal.css" type="text/css">' + 
-      '<script type="text/javascript">$(function() {$("textarea.html").wysiwyg({controls: {html: {visible: true}}});});</script>';
-};
-
 module.exports.styles = function(assets) {
   return exports.style(assets.css);
 };
