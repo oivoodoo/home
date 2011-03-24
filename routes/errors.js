@@ -2,9 +2,10 @@ var sys = require ('sys');
 
 module.exports = function(app) {
   
+  var sys = require("sys");
   process.addListener('uncaughtException', function (err, stack) {
-    console.log(err);
-    console.log(stack);
+    console.log(sys.inspect(err));
+    console.log(sys.inspect(stack));
     err.message && log(err.message);
     err.stack && log(err.stack);
   });

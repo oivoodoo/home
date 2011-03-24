@@ -1,5 +1,6 @@
 var assetManager = require('connect-assetmanager')
-    , assetHandler = require('connect-assetmanager-handlers');
+    , assetHandler = require('connect-assetmanager-handlers')
+    , stylus = require('stylus');
 
 var assetsConfig = {
     'js': {
@@ -19,11 +20,10 @@ var assetsConfig = {
     }
 };
 
-function compile(str, path, fn) {
+function compile(str, path) {
   stylus(str)
     .set('filename', path)
-    .set('compress', true)
-    .render(fn);
+    .set('compress', true);
 };
 
 exports.config = { 
