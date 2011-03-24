@@ -26,6 +26,7 @@ var app = module.exports = express.createServer(
     // , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
 );
 
+app.config = config;
 app.mongoose = mongoose;
 
 app.configure(function() {

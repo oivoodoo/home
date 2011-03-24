@@ -61,3 +61,6 @@
 [submodule "modules/nodemailer"]
 	path = modules/nodemailer
 	url = https://github.com/andris9/Nodemailer.git
+[submodule "modules/express-namespace"]
+	path = modules/express-namespace
+	url = https://github.com/visionmedia/express-namespace.git

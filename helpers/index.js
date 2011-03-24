@@ -10,7 +10,8 @@ module.exports = function(app) {
       return property.create();
       }
     , assets: function(res, req) {
-      return config.assets.cacheTimestamps;
+      console.log(app.config.assets);
+      return app.config.assets.cacheTimestamps;
       }
   });
   
