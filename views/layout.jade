@@ -20,4 +20,18 @@ html
         .clearer
         #container
           != body
+        #footer
+          ul#icons
+            li#rss
+              a(href='http://oivoodoo.tumblr.com/rss', title='Subscribe to my RSS-feed')
+                strong RSS
+            li#twitter
+              a(href='http://twitter.com/oivoodoo', title='Follow me on twitter')
+                strong Twitter
+            li#facebook
+              a(href='http://www.facebook.com/alexander.korsak', title='Show my facebook page')
+                strong Facebook
+            li#email
+              a(href='mailto:alex.korsak@gmail.com', title='Contacts me')
+                strong Email
   != helper.scripts(assets)

@@ -33,3 +33,10 @@ body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
 #container .post .tags{margin:0;margin-top:5px;}
 #container .post .tags a{margin:2px}
 #container .post .contact{float:left}
+#footer #icons{display:block;width:32px;height:32px;margin:0;background:transparent url("http://media.smashingmagazine.com/cdn_smash/wp-content/themes/default-autosvn-stable/images/smashnav/sprite_magazine.png");}
+#footer #icons li{margin:0;padding:0;float:left;list-style-type:none;}
+#footer #icons li a:hover,#footer #icons li a:active,#footer #icons li a:focus{outline:0}
+#footer #rss{background-position:-7px -71px}
+#footer #facebook{background-position:-40px -71px}
+#footer #twitter{background-position:-73px -71px}
+#footer #email{background-position:-106px -71px}
