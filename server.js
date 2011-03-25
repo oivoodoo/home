@@ -16,7 +16,7 @@ var app = module.exports = express.createServer(
     , stylus.middleware({
         src: __dirname + '/public/stylus'
         , dest: __dirname + '/public'
-        , compile: config.assets.compile
+        , compress: true
       })
     , config.assets.handler
     , connect.static(__dirname + '/public')
