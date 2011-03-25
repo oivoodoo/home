@@ -34,11 +34,21 @@ body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
 #container .post .tags{margin:0;margin-top:5px;}
 #container .post .tags a{margin:2px}
 #container .post .contact{float:left}
-#footer #icons{display:block;width:32px;height:32px;margin:0;background:transparent url("/images/social.png");}
+#footer{margin-top:10px;margin-bottom:30px;}
+#footer #icons{float:right;}
+#footer #icons a{display:block;width:32px;height:32px;margin:0;background:transparent url("/images/social.png")}
 #footer #icons li{margin:0;padding:0;float:left;list-style-type:none;}
 #footer #icons li a:hover,#footer #icons li a:active,#footer #icons li a:focus{outline:0}
 #footer #icons li a strong{display:none}
-#footer #rss a{background-position:-7px -71px}
-#footer #facebook a{background-position:-40px -71px}
-#footer #followme a{background-position:-73px -71px}
-#footer #email a{background-position:-106px -71px}
+#footer #rss a{background-position:-5px -2px;}
+#footer #rss a:hover{background-position:-5px -36px}
+#footer #rss a:active{background-position:-5px -68px}
+#footer #facebook a{background-position:-38px -2px;}
+#footer #facebook a:hover{background-position:-38px -36px}
+#footer #facebook a:active{background-position:-38px -68px}
+#footer #followme a{background-position:-70px -2px;}
+#footer #followme a:hover{background-position:-70px -36px}
+#footer #followme a:active{background-position:-70px -68px}
+#footer #email a{background-position:-104px -2px;}
+#footer #email a:hover{background-position:-73px -36px}
+#footer #email a:active{background-position:-73px -68px}
