@@ -19,13 +19,13 @@ body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
 #page_inner #container{background:#f2f2eb url("http://www.matthamm.com/images/textured_background.jpg");z-index:1000;margin-top:15px;padding:20px;min-height:400px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);position:relative;}
 #page_inner #container a.contact{color:#195d87;padding:0 .4em;background:rgba(255,97,0,0.3);font-weight:bold;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em}
 #page_inner #container a.contact:hover{background-color:#ff6100;cursor:pointer;color:#fff}
-#page_inner #container h1{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:20px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px}
+#page_inner #container h1{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:20px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px}
 #page_inner #container #projects{width:400px;float:left;margin-right:20px;}
-#page_inner #container #projects #demos{display:block;width:400px;height:230px;margin:15px 0 0 0;background:rgba(0,0,0,0.05);-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 0 8px rgba(0,0,0,0.296875);-moz-box-shadow:0 0 8px rgba(0,0,0,0.296875);box-shadow:0 0 8px rgba(0,0,0,0.296875);}
+#page_inner #container #projects #demos{display:block;width:400px;height:230px;background:rgba(0,0,0,0.05);-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 0 8px rgba(0,0,0,0.296875);-moz-box-shadow:0 0 8px rgba(0,0,0,0.296875);box-shadow:0 0 8px rgba(0,0,0,0.296875);}
 #page_inner #container #projects #demos img{margin:20px 0 0 0}
 #page_inner #container #projects #demos .text{padding:10px}
 #page_inner #container #projects #demos li{height:190px}
-#page_inner #container #aboutme #description{margin:15px 0 0 0;width:300px;float:left}
+#page_inner #container #aboutme #description{width:300px;float:left}
 #page_inner #container #twitter{margin:15px 0 0 0;width:400px;float:left;margin-right:20px}
 #page_inner #container #tumblr{margin:15px 0 0 0;width:300px;float:left}
 #page_inner #container .tweet,#page_inner #container .post{margin-bottom:10px}

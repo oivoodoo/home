@@ -12,7 +12,8 @@ $(function() {
       var tweet = data.results[i];
       html += "<div class='tweet'><a class='contact' href='http://twitter.com/oivoodoo/'>@oivoodoo</a>:<span>" + tweet.text + '</span></div>';
     }
-    $('#twitter').html(html);
+    $('#twitter').find('.loading').remove();
+    $('#twitter').append(html);
   });
   
   $.getJSON('http://oivoodoo.tumblr.com/api/read/json?callback=?', function(data){
@@ -32,6 +33,7 @@ $(function() {
         MAX += 1;
       }
     }
-    $('#tumblr').html(html);
+    $('#tumblr').find('.loading').remove();
+    $('#tumblr').append(html);
   });
 });
