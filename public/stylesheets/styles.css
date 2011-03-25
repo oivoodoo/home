@@ -1,7 +1,7 @@
 @font-face{font-family:"OrbitronMed";src:url("/fonts/orbitron-medium.eot");src:local("☺"),url("/fonts/orbitron-medium.otf") format("opentype")}
 html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,font,img,ul,li{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:trasparent;line-height:1.4}
-html{background:url("http://www.matthamm.com/images/linen_texture.png")}
-body{font:12px Georgia,Verdana,Lucida Sans Unicode,sans-serif;color:#6f6f6f;background:url("http://www.matthamm.com/images/transparent_gradient.png") repeat-x;}
+html{background:url("/images/line_texture.png")}
+body{font:12px Georgia,Verdana,Lucida Sans Unicode,sans-serif;color:#6f6f6f;background:url("/images/transparent_gradient.png") repeat-x;}
 body h1{font-size:50px}
 body p{margin:15px 0}
 body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
@@ -16,7 +16,7 @@ body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
 #menu li.l2{background:rgba(196,89,30,0.65)}
 #menu li.l3{background:rgba(65,117,160,0.65)}
 #menu li.l4{background:rgba(115,62,78,0.65)}
-#container{background:#f2f2eb url("http://www.matthamm.com/images/textured_background.jpg");z-index:1000;margin-top:15px;padding:20px;min-height:400px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);position:relative;}
+#container{background:#f2f2eb url("/images/textured_background.jpg");z-index:1000;margin-top:15px;padding:20px;min-height:400px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);position:relative;}
 #container a.contact{color:#195d87;padding:0 .4em;background:rgba(255,97,0,0.3);font-weight:bold;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em}
 #container a.contact:hover{background-color:#ff6100;cursor:pointer;color:#fff}
 #container h1{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:20px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px}
@@ -34,10 +34,11 @@ body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
 #container .post .tags{margin:0;margin-top:5px;}
 #container .post .tags a{margin:2px}
 #container .post .contact{float:left}
-#footer #icons{display:block;width:32px;height:32px;margin:0;background:transparent url("http://media.smashingmagazine.com/cdn_smash/wp-content/themes/default-autosvn-stable/images/smashnav/sprite_magazine.png");}
-#footer #icons li a{margin:0;padding:0;float:left;list-style-type:none;}
-#footer #icons li a a:hover,#footer #icons li a a:active,#footer #icons li a a:focus{outline:0}
+#footer #icons{display:block;width:32px;height:32px;margin:0;background:transparent url("/images/social.png");}
+#footer #icons li{margin:0;padding:0;float:left;list-style-type:none;}
+#footer #icons li a:hover,#footer #icons li a:active,#footer #icons li a:focus{outline:0}
+#footer #icons li a strong{display:none}
 #footer #rss a{background-position:-7px -71px}
 #footer #facebook a{background-position:-40px -71px}
-#footer #twitter a{background-position:-73px -71px}
+#footer #followme a{background-position:-73px -71px}
 #footer #email a{background-position:-106px -71px}
