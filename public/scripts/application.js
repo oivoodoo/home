@@ -6,14 +6,16 @@ $(function() {
     pagination:true
   });
   
+  $('#projects #demos li').css('display', 'block');
+  
   $.getJSON('http://search.twitter.com/search.json?callback=?&q=oivoodoo&rpp=5', function(data){
     var html = "";
     for(var i = 0; i < data.results.length; i++) {
       var tweet = data.results[i];
       html += "<div class='tweet'><a class='contact' href='http://twitter.com/oivoodoo/'>@oivoodoo</a>:<span>" + tweet.text + '</span></div>';
     }
-    $('#twitter').find('.loading').remove();
-    $('#twitter').append(html);
+    $('#container #twitter').find('.loading').remove();
+    $('#container #twitter').append(html);
   });
   
   $.getJSON('http://oivoodoo.tumblr.com/api/read/json?callback=?', function(data){
@@ -33,7 +35,7 @@ $(function() {
         MAX += 1;
       }
     }
-    $('#tumblr').find('.loading').remove();
-    $('#tumblr').append(html);
+    $('#container #tumblr').find('.loading').remove();
+    $('#container #tumblr').append(html);
   });
 });

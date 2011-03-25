@@ -25,7 +25,8 @@ body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
 #container #projects #demos img{margin:20px 0 0 0}
 #container #projects #demos .text{padding:10px}
 #container #projects #demos li{height:190px}
-#container #aboutme #description{width:300px;float:left}
+#container #aboutme #description{width:360px;float:left;}
+#container #aboutme #description p:first-child{margin-top:0}
 #container #twitter{margin:15px 0 0 0;width:400px;float:left;margin-right:20px}
 #container #tumblr{margin:15px 0 0 0;width:360px;float:left}
 #container .tweet,#container .post{margin-bottom:10px;background:#fff;border:1px solid #f2f2f2;padding:10px;float:left;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;line-height:1.4em;font-family:Georgia,"Times New Roman",Times,serif;font-style:italic}
@@ -34,9 +35,9 @@ body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
 #container .post .tags a{margin:2px}
 #container .post .contact{float:left}
 #footer #icons{display:block;width:32px;height:32px;margin:0;background:transparent url("http://media.smashingmagazine.com/cdn_smash/wp-content/themes/default-autosvn-stable/images/smashnav/sprite_magazine.png");}
-#footer #icons li{margin:0;padding:0;float:left;list-style-type:none;}
-#footer #icons li a:hover,#footer #icons li a:active,#footer #icons li a:focus{outline:0}
-#footer #rss{background-position:-7px -71px}
-#footer #facebook{background-position:-40px -71px}
-#footer #twitter{background-position:-73px -71px}
-#footer #email{background-position:-106px -71px}
+#footer #icons li a{margin:0;padding:0;float:left;list-style-type:none;}
+#footer #icons li a a:hover,#footer #icons li a a:active,#footer #icons li a a:focus{outline:0}
+#footer #rss a{background-position:-7px -71px}
+#footer #facebook a{background-position:-40px -71px}
+#footer #twitter a{background-position:-73px -71px}
+#footer #email a{background-position:-106px -71px}
