@@ -1,0 +1,32 @@
+@font-face{font-family:"OrbitronMed";src:url("/fonts/orbitron-medium.eot");src:local("☺"),url("/fonts/orbitron-medium.otf") format("opentype")}
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,font,img,ul,li{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:trasparent;line-height:1.4}
+html{background:url("http://www.matthamm.com/images/linen_texture.png")}
+body{font:12px Georgia,Verdana,Lucida Sans Unicode,sans-serif;color:#999;background:url("http://www.matthamm.com/images/transparent_gradient.png") repeat-x;}
+body h1{font-size:50px}
+body p{margin:15px 0}
+body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
+.clearer{clear:both}
+#page{margin:0 auto;padding:20px}
+#page_inner{margin:0 auto;width:820px;}
+#page_inner #menu{width:450px;position:relative;top:15px;z-index:80;}
+#page_inner #menu li{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);width:60px;overflow:hidden;margin:10px 10px 10px 0;padding:5px;float:left;text-align:center;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
+#page_inner #menu li:hover{-webkit-transform:scale(1.1);-moz-transform:scale(1.1)}
+#page_inner #menu li a{color:#fff;text-decoration:none;display:block;padding:5px 0;width:100%}
+#page_inner #menu li.l1{background:rgba(131,178,51,0.65)}
+#page_inner #menu li.l2{background:rgba(196,89,30,0.65)}
+#page_inner #menu li.l3{background:rgba(65,117,160,0.65)}
+#page_inner #menu li.l4{background:rgba(115,62,78,0.65)}
+#page_inner #container{background:#f2f2eb url("http://www.matthamm.com/images/textured_background.jpg");z-index:1000;margin-top:15px;padding:20px;min-height:400px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);position:relative;}
+#page_inner #container a.contact{color:#195d87;padding:0 .4em;background:rgba(255,97,0,0.3);font-weight:bold;-webkit-border-radius:1em;-moz-border-radius:1em;border-radius:1em}
+#page_inner #container a.contact:hover{background-color:#ff6100;cursor:pointer;color:#fff}
+#page_inner #container h1{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:20px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px}
+#page_inner #container #projects{width:400px;float:left;margin-right:20px;}
+#page_inner #container #projects #demos{display:block;width:400px;height:230px;margin:15px 0 0 0;background:rgba(0,0,0,0.05);-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 0 8px rgba(0,0,0,0.296875);-moz-box-shadow:0 0 8px rgba(0,0,0,0.296875);box-shadow:0 0 8px rgba(0,0,0,0.296875);}
+#page_inner #container #projects #demos img{margin:20px 0 0 0}
+#page_inner #container #projects #demos .text{padding:10px}
+#page_inner #container #projects #demos li{height:190px}
+#page_inner #container #aboutme #description{margin:15px 0 0 0;width:300px;float:left}
+#page_inner #container #twitter{margin:15px 0 0 0;width:400px;float:left;margin-right:20px}
+#page_inner #container #tumblr{margin:15px 0 0 0;width:300px;float:left}
+#page_inner #container .tweet,#page_inner #container .post{margin-bottom:10px}
+#page_inner #container .post .tags{padding:0;margin:0;margin-top:5px}

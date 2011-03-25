@@ -12,6 +12,14 @@ control-rotate()
   -webkit-transform rotate(arguments)
   -moz-transform rotate(arguments)
 
+transition()
+  -webkit-transition arguments
+  -moz-transition arguments
+
+transform()
+  -webkit-transform arguments
+  -moz-transform arguments
+
 @font-face
   font-family "OrbitronMed"
   src url('/fonts/orbitron-medium.eot');
@@ -25,16 +33,23 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, font, img,
   font-size 100%
   vertical-align baseline
   background trasparent
+  line-height 1.4
+
+html
+  background url(http://www.matthamm.com/images/linen_texture.png)
 
 body
   font 12px Georgia, Verdana, Lucida Sans Unicode, sans-serif
-  line-height 1px
   color #999
-  background url(http://mattobee.com/images/back.gif) repeat
+  background: url(http://www.matthamm.com/images/transparent_gradient.png) repeat-x;
   h1
     font-size 50px
   p
     margin 15px 0
+  a
+    color #0A7BC1
+    font-weight normal
+    text-decoration none
 
 .clearer
   clear both
@@ -42,29 +57,33 @@ body
 #page
   margin 0 auto
   padding 20px
-
+  
 #page_inner
   margin 0 auto
   width 820px
   #menu
-    width 400px
+    width 450px
     position relative
     top 15px
-    left 20px
     z-index 80
     li
-      control-rotate -45deg
-      width 50px
+      border-radius 5px
+      border-shadow 0px 0px 10px rgba(0, 0, 0, 0.5)
+      width 60px
       overflow hidden
-      margin 10px 0px
-      padding 5px 5px 5px 18px
+      margin 10px 10px 10px 0px
+      padding 5px
       float left
-      text-align right
+      text-align center
+      transition all .2s ease-in-out
+      &:hover
+        transform scale(1.1)
       a
         color white
         text-decoration none
         display block
-        padding 5px
+        padding 5px 0px
+        width 100%
     li.l1
       background rgba(131, 178, 51, 0.65)
     li.l2
@@ -74,16 +93,16 @@ body
     li.l4
       background rgba(115, 62, 78, 0.65)
   #container
+    background #f2f2eb url(http://www.matthamm.com/images/textured_background.jpg)
     z-index 1000
     margin-top 15px
     padding 20px
-    min-height 320px
-    height 450px
-    background white
-    border-radius 10px
-    border-shadow 0px 0px 8px rgba(0, 0, 0, 0.296875)
+    min-height 400px
+    border-radius 5px
+    border-shadow 0px 0px 10px rgba(0, 0, 0, 0.5)
     position relative
     a.contact
+      color #195D87
       &:hover
         background-color rgba(255, 97, 0, 1)
         cursor pointer
@@ -92,10 +111,8 @@ body
       background rgba(255, 97, 0, .3)
       font-weight bold
       border-radius 1em
-    #top
-      margin-top 10px
     h1
-      text-shadow rgba(0, 0, 0, 0.597656) 1px 1px
+      text-shadow rgba(6, 6, 6, 0.597656) 1px 1px
       font-size 20px
       font-family OrbitronMed, 'Courier New', monospace;
       text-transform uppercase
@@ -108,7 +125,7 @@ body
         display block
         width 400px
         height 230px
-        margin 20px 0 0 0px
+        margin 15px 0 0 0px
         background rgba(0, 0, 0, 0.05)
         border-radius 10px
         border-shadow 0px 0px 8px rgba(0, 0, 0, 0.296875)
@@ -120,6 +137,21 @@ body
           height 190px
     #aboutme
       #description
-        margin 20px 0 0 0px
+        margin 15px 0 0 0px
         width 300px
         float left
+    #twitter
+      margin 15px 0 0 0px
+      width 400px
+      float left
+      margin-right 20px
+    #tumblr
+      margin 15px 0 0 0px
+      width 300px
+      float left
+    .tweet, .post
+      margin-bottom 10px
+    .post .tags
+      padding 0px
+      margin 0px
+      margin-top 5px
