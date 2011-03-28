@@ -1,14 +1,20 @@
-form#contacts
-  input(type='hidden', name='_method', value='put')
-  label(for='contact[email]') Email:
-  input(type='text', name='contact[email]')
-  br
-  label(for='contact[name]') Name:
-  textarea(name='contact[name]')
-  br
-  label(for='contact[message]') Message:
-  textarea(name='contact[message]')
-  br
-  input(type='submit', value='Send')
-
-    
+#contacts
+  .left
+    h1 Contact Me
+    form#contacts(action='/contacts', method='post')
+      input(type='hidden', name='_method', value='post')
+      label(for='contact[email]') Email:
+      input(type='text', name='contact[email]')
+      br
+      label(for='contact[name]') Name:
+      input(type='text',name='contact[name]')
+      br
+      label(for='contact[message]') Message:
+      textarea(name='contact[message]')
+      br
+      div
+        input(type='submit', value='Send')
+  .right
+    h1 Why should you hire me?
+    p There I will place text, why users have to contact me.
+  .clearer

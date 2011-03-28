@@ -1,6 +1,9 @@
+var nodemailer = require('nodemailer');
+
 module.exports = function(app) {
-  var Score = app.Score;
-  var Post = app.Post;
+  var Score = app.Score
+      , Post = app.Post
+      , Contact = app.Contact;
 
   app.get('/', function(req, res) {
     Post.find({}, function(err, posts) {
@@ -41,15 +44,17 @@ module.exports = function(app) {
     }).limit(13).sort('scores', -1);
   });
 
-  app.get('/about', function(req, res, next){
-    res.render('about');
-  });
-
-  app.get('/projects', function(req, res, next){
+  app.get('/projects(/)?', function(req, res, next){
     res.render('projects');
-  });
+    });
 
-  app.get('/contacts', function(req, res, next){
+  app.get('/contacts(/)?', function(req, res, next){
     res.render('contacts');
-  });
+    });
+  
+  app.post('/contacts', function(req, res, next) {
+    var contact = new Contact(req.body.contact);
+    contact.save();
+    res.redirect('/contacts');
+    });
 }

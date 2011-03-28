@@ -51,6 +51,57 @@ body
     font-weight normal
     text-decoration none
 
+input[type='text'], textarea
+  border-radius 5px
+  border-shadow 0px 0px 5px rgba(0, 0, 0, 0.5)
+  padding 7px 7px 3px 7px
+  border 1px solid #666
+
+button, input[type='button'], input[type='submit']
+  background #EEE
+  background -moz-linear-gradient(top, #EEE 0%, #CCC 100%)
+  background -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#CCC))
+  border 1px solid #CCC
+  border-bottom 1px solid #BBB
+  -moz-border-radius 3px
+  -webkit-border-radius 3px
+  border-radius 3px
+  color #333
+  font-family "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
+  font-size 11px
+  font-weight bold
+  line-height 1
+  padding 8px 0
+  text-align center
+  text-shadow 0 1px 0 #EEE
+  width 80px
+
+button:hover, input[type='button']:hover, input[type='submit']:hover
+  background #DDD
+  background -moz-linear-gradient(top, #DDD 0%, #BBB 100%)
+  background -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#BBB))
+  border 1px solid #BBB
+  border-bottom 1px solid #999
+  cursor pointer
+
+label
+  margin-bottom 5px
+label, input, textarea
+    display block
+
+#contacts
+  input[type='text']
+    width 200px
+  textarea
+    width 350px
+    height 150px
+  .left
+    width 368px
+    float left
+    margin-right 20px
+  .right
+    width 386px
+    float left
 .clearer
   clear both
 

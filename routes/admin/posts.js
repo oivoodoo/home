@@ -37,9 +37,6 @@ module.exports = function(app) {
     })
   });
 
-
-  var sys = require('sys');
-
   app.post('/admin/posts(/)?', function(req, res, next){
     var post = new Post(req.body.post);
     post.save(function(err) {

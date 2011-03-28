@@ -1,6 +1,8 @@
 var assetManager = require('connect-assetmanager')
     , assetHandler = require('connect-assetmanager-handlers')
-    , stylus = require('stylus');
+    , stylus = require('stylus')
+    , settings = require('./settings')
+    , nodemailer = require('nodemailer');
 
 var assetsConfig = {
     'js': {
@@ -26,10 +28,13 @@ function compile(str, path) {
     .set('compress', true);
 };
 
+nodemailer.SMTP = settings.email;
+
 exports.config = { 
   assets: { 
     handler: assetManager(assetsConfig)
     , compile: compile
-  }
+  },
+  email: settings.email
 };
 
