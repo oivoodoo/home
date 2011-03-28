@@ -1,12 +1,12 @@
-module.exports = function(mongoose, func) {
-    var Schema = mongoose.Schema;
+module.exports = function(app) {
+    var Schema = app.mongoose.Schema;
 
     Score = new Schema({
         'username': {type: String, default: "empty"},
         'scores': {type: Number, default: 0}
     })
 
-    mongoose.model('score', Score);
+    app.mongoose.model('score', Score);
 
-    func();
+    app.Score = app.mongoose.model("score");
 }

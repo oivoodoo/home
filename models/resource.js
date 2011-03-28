@@ -1,5 +1,5 @@
-module.exports = function(mongoose, func) {
-    var Schema = mongoose.Schema;
+module.exports = function(app) {
+    var Schema = app.mongoose.Schema;
 
     Resource = new Schema({
         'name': {type: String, default: ''}
@@ -9,7 +9,7 @@ module.exports = function(mongoose, func) {
         return t.length > 0;
     }, "name can't be empty");
 
-    mongoose.model('resource', Resource);
+    app.mongoose.model('resource', Resource);
 
-    func();
+    app.Resource = app.mongoose.model("resource");
 }

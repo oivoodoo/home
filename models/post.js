@@ -1,5 +1,5 @@
-module.exports = function(mongoose, func) {
-    var Schema = mongoose.Schema;
+module.exports = function(app) {
+    var Schema = app.mongoose.Schema;
 
     Post = new Schema({
         'title': {type: String, default: ''},
@@ -16,7 +16,7 @@ module.exports = function(mongoose, func) {
         return c.length > 0;
     }, "content can't be empty");
 
-    mongoose.model('post', Post);
+    app.mongoose.model('post', Post);
 
-    func();
+    app.Post = app.mongoose.model("post");
 }
