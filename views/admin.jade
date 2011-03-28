@@ -9,7 +9,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
       #header
         h2= 'My Admin Area'
         #topmenu
-          ul!= partial('resource', resources)
+          != admin.topMenu([['Posts', 'posts'], ['Contacts', 'contacts']], admin_menu.get())
         #wrapper
           #content
             != body 

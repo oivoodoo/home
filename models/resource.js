@@ -2,7 +2,8 @@ module.exports = function(app) {
     var Schema = app.mongoose.Schema;
 
     Resource = new Schema({
-        'name': {type: String, default: ''}
+        'name': {type: String, default: ''},
+        'link': {type: String, default: '/'}
     });
 
     Resource.path("name").validate(function(t) {

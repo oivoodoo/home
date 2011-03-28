@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  var Post = app.Post;
+  var Post  = app.Post;
 
   app.param('post', function(req, res, next, id){
     if (id != null) {
