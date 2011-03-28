@@ -4,5 +4,5 @@ module.exports.email = {
     ssl: true,
     use_authentication: true,
     user: "alexander.korsak@gmail.com",
-    pass: "201287ali"
+    pass: ""
 };
