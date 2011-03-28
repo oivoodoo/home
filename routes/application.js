@@ -51,7 +51,7 @@ module.exports = function(app) {
   app.get('/contacts(/)?', function(req, res, next){
     res.render('contacts');
     });
-  
+
   app.post('/contacts', function(req, res, next) {
     var contact = new Contact(req.body.contact);
     contact.save(function(err) {
@@ -60,10 +60,10 @@ module.exports = function(app) {
         sender: "alex.korsak@gmail.com",
         to: "alex.korsak@gmail.com",
         subject: "(Home Site) Someone contact you",
-        body: 'Email: ' + contact.email + 'Name: ' + contact.name + ' ' + contact.message
+        html: 'Email: ' + contact.email + '<br />Name: ' + contact.name + '<br/>Message:<br/>' + contact.message
         },
         function(error, success) {
-          console.log("Message "+(success?"sent":"failed"));
+          console.log("Message "+(success ? "sent" : "failed"));
           }
         );
       });

@@ -3,6 +3,6 @@ module.exports.email = {
     port: 465,
     ssl: true,
     use_authentication: true,
-    user: "alexander.korsak@gmail.com",
-    pass: ""
+    user: "someone@gmail.com",
+    pass: "password-drowssap"
 };
