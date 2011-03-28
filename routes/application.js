@@ -60,7 +60,7 @@ module.exports = function(app) {
         sender: "alex.korsak@gmail.com",
         to: "alex.korsak@gmail.com",
         subject: "(Home Site) Someone contact you",
-        body: contact.message
+        body: 'Email: ' + contact.email + 'Name: ' + contact.name + ' ' + contact.message
         },
         function(error, success) {
           console.log("Message "+(success?"sent":"failed"));

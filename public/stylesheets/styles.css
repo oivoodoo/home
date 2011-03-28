@@ -10,10 +10,6 @@ button,input[type="button"],input[type="submit"]{background:#eee;background:-moz
 button:hover,input[type="button"]:hover,input[type="submit"]:hover{background:#ddd;background:-moz-linear-gradient(top,#ddd 0,#bbb 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#ddd),to(#bbb));border:1px solid #bbb;border-bottom:1px solid #999;cursor:pointer}
 label{margin-bottom:5px}
 label,input,textarea{display:block}
-#contacts input[type="text"]{width:200px}
-#contacts textarea{width:350px;height:150px}
-#contacts .left{width:368px;float:left;margin-right:20px}
-#contacts .right{width:386px;float:left}
 .clearer{clear:both}
 #page{margin:0 auto;padding:20px}
 #page_inner{margin:0 auto;width:820px}
@@ -30,6 +26,14 @@ label,input,textarea{display:block}
 #container a.contact:hover{background-color:#ff6100;cursor:pointer;color:#fff}
 #container a.contact:hover,#container a.contact:active,#container a.contact:focus{-webkit-transform:scale(1.1);-moz-transform:scale(1.1)}
 #container h1{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:20px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px}
+#container h2{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:16px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+#container #projects_list .project{margin-bottom:20px;}
+#container #projects_list .project img{float:left;margin-right:20px}
+#container #projects_list .project .text{float:left}
+#container #contacts input[type="text"]{width:200px}
+#container #contacts textarea{width:350px;height:150px}
+#container #contacts .left{width:368px;float:left;margin-right:20px}
+#container #contacts .right{width:386px;float:left}
 #container #projects{width:400px;float:left;margin-right:20px;}
 #container #projects #demos{display:block;width:400px;height:230px;background:rgba(0,0,0,0.05);-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 0 8px rgba(0,0,0,0.296875);-moz-box-shadow:0 0 8px rgba(0,0,0,0.296875);box-shadow:0 0 8px rgba(0,0,0,0.296875);}
 #container #projects #demos img{margin:20px 0 0 0}
@@ -39,7 +43,8 @@ label,input,textarea{display:block}
 #container #aboutme #description p:first-child{margin-top:0}
 #container #twitter{margin:15px 0 0 0;width:400px;float:left;margin-right:20px}
 #container #tumblr{margin:15px 0 0 0;width:360px;float:left}
-#container .tweet,#container .post{margin-bottom:10px;background:#fff;border:1px solid #f2f2f2;padding:10px;float:left;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;line-height:1.4em;font-family:Georgia,"Times New Roman",Times,serif;font-style:italic}
+#container .tweet,#container .post{float:left}
+#container .tweet,#container .post,#container .box{margin-bottom:10px;background:#fff;border:1px solid #f2f2f2;padding:10px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;line-height:1.4em;font-family:Georgia,"Times New Roman",Times,serif;font-style:italic}
 #container .post{width:340px;}
 #container .post .tags{margin:0;margin-top:5px;}
 #container .post .tags a{margin:2px}

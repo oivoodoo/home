@@ -89,19 +89,6 @@ label
 label, input, textarea
     display block
 
-#contacts
-  input[type='text']
-    width 200px
-  textarea
-    width 350px
-    height 150px
-  .left
-    width 368px
-    float left
-    margin-right 20px
-  .right
-    width 386px
-    float left
 .clearer
   clear both
 
@@ -173,6 +160,34 @@ label, input, textarea
     text-transform uppercase
     letter-spacing 1px
     margin-bottom 15px
+  h2
+    text-shadow rgba(6, 6, 6, 0.597656) 1px 1px
+    font-size 16px
+    font-family OrbitronMed, 'Courier New', monospace;
+    text-transform uppercase
+    letter-spacing 1px
+    margin-bottom 10px
+  #projects_list
+    .project 
+      margin-bottom 20px
+      img
+        float left
+        margin-right 20px
+      .text
+        float left
+  #contacts
+    input[type='text']
+      width 200px
+    textarea
+      width 350px
+      height 150px
+    .left
+      width 368px
+      float left
+      margin-right 20px
+    .right
+      width 386px
+      float left
   #projects
     width 400px
     float left
@@ -206,11 +221,12 @@ label, input, textarea
     width 360px
     float left
   .tweet, .post
+    float left
+  .tweet, .post, .box
     margin-bottom 10px
     background white
     border 1px solid #F2F2F2
     padding 10px
-    float left
     border-radius 5px
     line-height 1.4em
     font-family Georgia, "Times New Roman", Times, serif
