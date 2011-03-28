@@ -54,7 +54,19 @@ module.exports = function(app) {
   
   app.post('/contacts', function(req, res, next) {
     var contact = new Contact(req.body.contact);
-    contact.save();
+    contact.save(function(err) {
+      console.log(err);
+      nodemailer.send_mail({
+        sender: "alex.korsak@gmail.com",
+        to: "alex.korsak@gmail.com",
+        subject: "(Home Site) Someone contact you",
+        body: contact.message
+        },
+        function(error, success) {
+          console.log("Message "+(success?"sent":"failed"));
+          }
+        );
+      });
     res.redirect('/contacts');
     });
 }
