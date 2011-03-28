@@ -12,10 +12,11 @@ $(function() {
     var html = "";
     for(var i = 0; i < data.results.length; i++) {
       var tweet = data.results[i];
-      html += "<div class='tweet'><a class='contact' href='http://twitter.com/oivoodoo/'>@oivoodoo</a>:<span>" + tweet.text + '</span></div>';
+      html += "<div class='tweet' style='display:none'><a class='contact' href='http://twitter.com/oivoodoo/'>@oivoodoo</a>:<span>" + tweet.text + '</span></div>';
     }
     $('#container #twitter').find('.loading').remove();
     $('#container #twitter').append(html);
+    $('#container #twitter .tweet').slideDown(300);
   });
   
   $.getJSON('http://oivoodoo.tumblr.com/api/read/json?callback=?', function(data){
@@ -24,7 +25,7 @@ $(function() {
     for(var i = 0; (i < MAX) && data.posts.length > i; i++) {
       var post = data.posts[i];
       if (!!post['regular-title']) {
-        html += "<div class='post'><a href='" + post.url + "'>" + post['regular-title'] + "</a><p class='tags'>";
+        html += "<div class='post' style='display:none'><a href='" + post.url + "'>" + post['regular-title'] + "</a><p class='tags'>";
         if (!!post.tags) {
           for(var j = 0; j < post.tags.length; j++) {
             html += "<a class='contact' href='http://oivoodoo.tumblr.com/tagged/" + post.tags[j] + "/chrono'>" + post.tags[j] + "</a>";
@@ -37,5 +38,6 @@ $(function() {
     }
     $('#container #tumblr').find('.loading').remove();
     $('#container #tumblr').append(html);
+    $('#container #tumblr .post').slideDown(300);
   });
 });
