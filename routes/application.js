@@ -6,13 +6,7 @@ module.exports = function(app) {
       , Contact = app.Contact;
 
   app.get('/', function(req, res) {
-    Post.find({}, function(err, posts) {
-      res.render('index', {
-        locals:{
-            posts: posts
-        }
-      });
-    }).limit(10).sort('updatedAt', -1);
+      res.render('index', {layout: !req.xhr});
   });
 
   app.post('/create', function(req, res) {
@@ -35,24 +29,22 @@ module.exports = function(app) {
         } else {
           res.send("-ERR");
         }
-      break;
-      default:
-        res.render('index.jade', {
-          locals: { scores: scores }
-        });
+        break;
       }
     }).limit(13).sort('scores', -1);
   });
 
   app.get('/projects(/)?', function(req, res, next){
-    res.render('projects');
+    res.render('projects', {layout: !req.xhr});
     });
 
-  app.get('/contacts(/)?', function(req, res, next){
-    res.render('contacts');
+  app.get('/contacts(/)?', function(req, res, next) {
+    res.render('contacts', {layout: !req.xhr});
     });
 
   app.post('/contacts', function(req, res, next) {
+    console.log(req.body);
+    console.log(require('sys').inspect(req.body));
     var contact = new Contact(req.body.contact);
     contact.save(function(err) {
       console.log(err);
@@ -67,6 +59,6 @@ module.exports = function(app) {
           }
         );
       });
-    res.redirect('/contacts');
+      res.send('Message is sent!');
     });
 }

@@ -4,16 +4,16 @@
     form#contacts(action='/contacts', method='post')
       input(type='hidden', name='_method', value='post')
       label(for='contact[email]') Email:
-      input(type='text', name='contact[email]')
+      input(type='text', name='contact[email]', id='contact_email')
       br
       label(for='contact[name]') Name:
-      input(type='text',name='contact[name]')
+      input(type='text',name='contact[name]', id='contact_name')
       br
       label(for='contact[message]') Message:
-      textarea(name='contact[message]')
+      textarea(name='contact[message]', id='contact_message')
       br
       div
-        input(type='submit', value='Send')
+        input(type='submit', value='Send', id="send_button")
   .right
     h1 Why should you hire me?
     p I'm a person with strong motivation to do my best. Time for me is the most precious thing! 
