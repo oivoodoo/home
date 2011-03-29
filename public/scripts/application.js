@@ -1,7 +1,6 @@
 $(function() {
   
-  function load_home_page() {
-  
+  function load_home_page() { 
     $('#projects #demos').Horinaja({
       capture:'demos',
       delai:0.3,
@@ -62,7 +61,7 @@ $(function() {
     return false;
   });
   
-  $('#menu .l4').click(function() {
+  $('#menu .l4, .contact_button').live('click', function() {
     $('#container').html('').append("<img class='loading' src='/images/loading.gif'/>");
     $.get('/contacts', function(data) {
       $('#container').html(data);
