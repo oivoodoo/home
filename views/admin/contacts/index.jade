@@ -1,0 +1,17 @@
+- admin_menu.set('Contacts')
+
+#rightnow
+  h3.reallynow 
+    span Contacts
+    br
+  table
+    thead
+      th(width='60px')= 'Email'
+      th(width='80px')= 'Name'
+      th= 'Message'
+    tbody
+      - each contact in contacts
+        tr
+          td= contact.email
+          td= contact.name
+          td= contact.message

@@ -1,0 +1,66 @@
+[submodule "modules/express"]
+  path = modules/express
+	url = https://github.com/visionmedia/express.git
+[submodule "modules/connect-mongodb"]
+	path = modules/connect-mongodb
+	url = https://github.com/masylum/connect-mongodb.git
+[submodule "modules/mongoose"]
+	path = modules/mongoose
+	url = https://github.com/LearnBoost/mongoose.git
+[submodule "modules/connect"]
+	path = modules/connect
+	url = https://github.com/senchalabs/connect.git
+[submodule "modules/qs"]
+	path = modules/qs
+	url = git://github.com/visionmedia/node-querystring.git
+[submodule "modules/mime"]
+	path = modules/mime
+	url = https://github.com/bentomas/node-mime.git
+[submodule "modules/mongodb"]
+	path = modules/mongodb
+	url = https://github.com/christkv/node-mongodb-native.git
+[submodule "modules/stylus"]
+	path = modules/stylus
+	url = https://github.com/LearnBoost/stylus.git
+[submodule "modules/connect-form"]
+	path = modules/connect-form
+	url = git://github.com/visionmedia/connect-form.git
+[submodule "modules/should"]
+	path = modules/should
+	url = git://github.com/visionmedia/should.js.git
+[submodule "modules/expresso"]
+	path = modules/expresso
+	url = git://github.com/visionmedia/expresso.git.git
+[submodule "modules/jade"]
+	path = modules/jade
+	url = git://github.com/visionmedia/jade.git
+[submodule "modules/connect-assetmanager"]
+	path = modules/connect-assetmanager
+	url = https://github.com/mape/connect-assetmanager.git
+[submodule "modules/connect-assetmanager-handlers"]
+	path = modules/connect-assetmanager-handlers
+	url = https://github.com/mape/connect-assetmanager-handlers.git
+[submodule "modules/request"]
+	path = modules/request
+	url = https://github.com/mikeal/request.git
+[submodule "modules/step"]
+	path = modules/step
+	url = https://github.com/creationix/step.git
+[submodule "modules/uglify-js"]
+	path = modules/uglify-js
+	url = https://github.com/mishoo/UglifyJS.git
+[submodule "modules/express-messages"]
+	path = modules/express-messages
+	url = https://github.com/visionmedia/express-messages.git
+[submodule "modules/date-utils"]
+	path = modules/date-utils
+	url = https://github.com/JerrySievert/node-date-utils.git
+[submodule "modules/node-markdown"]
+	path = modules/node-markdown
+	url = https://github.com/andris9/node-markdown.git
+[submodule "modules/nodemailer"]
+	path = modules/nodemailer
+	url = https://github.com/andris9/Nodemailer.git
+[submodule "modules/express-namespace"]
+	path = modules/express-namespace
+	url = https://github.com/visionmedia/express-namespace.git

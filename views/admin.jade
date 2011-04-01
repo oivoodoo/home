@@ -1,0 +1,16 @@
+!!!
+html(xmlns="http://www.w3.org/1999/xhtml")
+  head
+    title= 'Dashboard - Admin'
+    != helper.style('admin/style')
+    != helper.style('admin/theme1')
+  body
+    #container
+      #header
+        h2= 'My Admin Area'
+        #topmenu
+          != admin.topMenu([['Posts', 'posts'], ['Contacts', 'contacts']], admin_menu.get())
+        #wrapper
+          #content
+            != body 
+    #footer
