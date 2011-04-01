@@ -1,8 +1,0 @@
-.post
-  h3= post.title
-
-  p.datetime.created Created at #{helper.formatDate(post.createdAt)}
-  - if (post.updatedAt)
-    p.datetime.updated Updated at #{helper.formatDate(post.updatedAt)}
-
-  div.content!= post.content

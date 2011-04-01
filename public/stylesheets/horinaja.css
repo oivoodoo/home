@@ -1,7 +1,0 @@
-.horinaja ul{position:relative;}
-.horinaja ul li{background:transparent;display:none;top:0}
-.horinaja ul li:first-child{display:block}
-ol.horinaja_pagination{height:40px;margin:0 auto;position:relative;background:transparent;padding:5px 0 0 0;clear:both;}
-ol.horinaja_pagination li{float:left;height:40px;display:block;}
-ol.horinaja_pagination li a{height:30px;display:block;background:transparent;float:left;color:#000;font-weight:bold;text-align:center;font-size:12px;padding:10px 0 0 0;cursor:pointer;font-weight:bold;}
-ol.horinaja_pagination li a:hover{color:#195d87}
