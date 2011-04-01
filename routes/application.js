@@ -43,11 +43,8 @@ module.exports = function(app) {
     });
 
   app.post('/contacts', function(req, res, next) {
-    console.log(req.body);
-    console.log(require('sys').inspect(req.body));
     var contact = new Contact(req.body.contact);
     contact.save(function(err) {
-      console.log(err);
       nodemailer.send_mail({
         sender: "alex.korsak@gmail.com",
         to: "alex.korsak@gmail.com",
