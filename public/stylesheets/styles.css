@@ -28,7 +28,7 @@ label,input,textarea{display:block}
 #container h1{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:20px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px}
 #container h2{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:16px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
 #container #projects_list .project{margin-bottom:20px;}
-#container #projects_list .project img{float:left;margin-right:20px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;height:160px}
+#container #projects_list .project img{float:left;margin-right:20px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;height:160px;width:270px}
 #container #projects_list .project .text{float:left;width:460px}
 #container #contacts input[type="text"]{width:200px}
 #container #contacts textarea{width:350px;height:150px}
