@@ -11,7 +11,7 @@ module.exports = function(app) {
   });
   
   app.configure('production', function() {
-    app.set('db-uri', 'mongodb://localhost/scores-production');
+    app.set('db-uri', 'mongodb://localhost/scores-development');
   });
   
   app.db = app.mongoose.connect(app.set('db-uri'));
