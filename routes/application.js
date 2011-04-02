@@ -1,4 +1,6 @@
 var nodemailer = require('nodemailer');
+var sys = require ('sys');
+
 
 module.exports = function(app) {
   var Score = app.Score
@@ -18,7 +20,8 @@ module.exports = function(app) {
   });
 
   app.get('/top/:format?', function(req, res) {
-    var scores = Score.find({}, function(err, scores) {
+    var query = Score.find();
+    query.limit(30).sort('scores', -1).exec(function(err, scores) {
       switch(req.params.format) {
       case 'json':
         res.header("Access-Control-Allow-Origin", "*");
@@ -31,7 +34,7 @@ module.exports = function(app) {
         }
         break;
       }
-    }).limit(13).sort('scores', -1);
+    });
   });
 
   app.get('/projects(/)?', function(req, res, next){
@@ -57,5 +60,5 @@ module.exports = function(app) {
         );
       });
       res.send('Message is sent!');
-    });
+  });
 }

@@ -1,5 +1,8 @@
 require.paths.unshift('./modules/');
 
+process.env.EXPRESS_ENV = 'production';
+process.env.NODE_ENV = 'production';
+
 var sys = require('sys')
     , express = require('express')
     , jade = require('jade')
@@ -23,7 +26,6 @@ var app = module.exports = express.createServer(
     , connect.bodyParser()
     , connect.methodOverride()
     , connect.favicon()
-    // , connect.session({ secret: '9FF96302-4633-11E0-AAE4-38FEDED72085' })
 );
 
 app.configure(function() {
@@ -42,7 +44,7 @@ require('./routes')(app);
 require('./helpers')(app);
 
 if (!module.parent) {
-  app.listen(process.env.C9_PORT || 3001);
+  app.listen(process.env.PORT || 3001);
   console.log('Express server listening on port %d, environment: %s', app.address().port, app.settings.env)
   console.log('Using Express %s, Jade %s', express.version, jade.version);
 }
