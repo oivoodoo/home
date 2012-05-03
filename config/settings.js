@@ -3,6 +3,6 @@ module.exports.email = {
     port: 465,
     ssl: true,
     use_authentication: true,
-    user: "alexander.korsak@gmail.com",
-    pass: "201287ali"
+    user: process.env.SETTINGS_EMAIL,
+    pass: process.env.SETTINGS_PASSWORD
 };
