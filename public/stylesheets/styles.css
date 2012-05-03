@@ -1,19 +1,20 @@
-@font-face{font-family:"OrbitronMed";src:url("/fonts/orbitron-medium.eot");src:local("☺"),url("/fonts/orbitron-medium.otf") format("opentype")}
+@font-face{font-family:"OrbitronMed";src:url("/fonts/orbitron-medium.eot");src:local('☺'),url("/fonts/orbitron-medium.otf") format("opentype")}
 html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,font,img,ul,li{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:trasparent;line-height:1.4}
 html{background:url("/images/line_texture.png")}
 body{font:12px Georgia,Verdana,Lucida Sans Unicode,sans-serif;color:#6f6f6f;background:url("/images/transparent_gradient.png") repeat-x;}
 body h1{font-size:50px}
 body p{margin:15px 0}
 body a{color:#0a7bc1;font-weight:normal;text-decoration:none}
-input[type="text"],textarea{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);-moz-box-shadow:0 0 5px rgba(0,0,0,0.5);box-shadow:0 0 5px rgba(0,0,0,0.5);padding:7px 7px 3px 7px;border:1px solid #666}
-button,input[type="button"],input[type="submit"]{background:#eee;background:-moz-linear-gradient(top,#eee 0,#ccc 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#eee),to(#ccc));border:1px solid #ccc;border-bottom:1px solid #bbb;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#333;font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;font-size:11px;font-weight:bold;line-height:1;padding:8px 0;text-align:center;text-shadow:0 1px 0 #eee;width:80px}
-button:hover,input[type="button"]:hover,input[type="submit"]:hover{background:#ddd;background:-moz-linear-gradient(top,#ddd 0,#bbb 100%);background:-webkit-gradient(linear,0 0,0 100%,from(#ddd),to(#bbb));border:1px solid #bbb;border-bottom:1px solid #999;cursor:pointer}
+input[type='text'],textarea{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);-moz-box-shadow:0 0 5px rgba(0,0,0,0.5);box-shadow:0 0 5px rgba(0,0,0,0.5);padding:7px 7px 3px 7px;border:1px solid #666}
+button,input[type='button'],input[type='submit']{background:#eee;background:-moz-linear-gradient(top,#eee 0%,#ccc 100%);background:-webkit-gradient(linear,0% 0%,0% 100%,from(#eee),to(#ccc));border:1px solid #ccc;border-bottom:1px solid #bbb;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#333;font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;font-size:11px;font-weight:bold;line-height:1;padding:8px 0;text-align:center;text-shadow:0 1px 0 #eee;width:80px}
+button:hover,input[type='button']:hover,input[type='submit']:hover{background:#ddd;background:-moz-linear-gradient(top,#ddd 0%,#bbb 100%);background:-webkit-gradient(linear,0% 0%,0% 100%,from(#ddd),to(#bbb));border:1px solid #bbb;border-bottom:1px solid #999;cursor:pointer}
 label{margin-bottom:5px}
 label,input,textarea{display:block}
 .clearer{clear:both}
 #page{margin:0 auto;padding:20px}
 #page_inner{margin:0 auto;width:820px}
 #menu{width:450px;position:relative;top:15px;z-index:80;}
+#menu #plus{padding-top:16px}
 #menu li{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);width:60px;overflow:hidden;margin:10px 10px 10px 0;padding:5px;float:left;text-align:center;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
 #menu li:hover{-webkit-transform:scale(1.1);-moz-transform:scale(1.1)}
 #menu li a{color:#fff;text-decoration:none;display:block;padding:5px 0;width:100%}
@@ -22,21 +23,25 @@ label,input,textarea{display:block}
 #menu li.l3{background:rgba(65,117,160,0.65)}
 #menu li.l4{background:rgba(115,62,78,0.65)}
 #container{background:#f2f2eb url("/images/textured_background.jpg");z-index:1000;margin-top:15px;padding:20px;min-height:400px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);position:relative;}
+#container #scores{list-style-type:decimal;}
+#container #scores li{margin-bottom:10px;margin-left:10px}
+#container #scores .username,#container #scores .scores{font-size:12px}
+#container #scores .scores{margin-left:20px}
 #container a.contact{color:#195d87;padding:0 .4em;background:rgba(255,97,0,0.3);font-weight:bold;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
 #container a.contact:hover{background-color:#ff6100;cursor:pointer;color:#fff}
 #container a.contact:hover,#container a.contact:active,#container a.contact:focus{-webkit-transform:scale(1.1);-moz-transform:scale(1.1)}
-#container h1{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:20px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px}
-#container h2{text-shadow:rgba(6,6,6,0.597656) 1px 1px;font-size:16px;font-family:OrbitronMed,"Courier New",monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+#container h1{text-shadow:rgba(6,6,6,0.598) 1px 1px;font-size:20px;font-family:OrbitronMed,'Courier New',monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px}
+#container h2{text-shadow:rgba(6,6,6,0.598) 1px 1px;font-size:16px;font-family:OrbitronMed,'Courier New',monospace;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
 #container #projects_list .project{margin-bottom:20px;}
-#container #projects_list .project img{float:left;margin-right:20px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;height:160px}
+#container #projects_list .project img{float:left;margin-right:20px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;height:160px;width:270px}
 #container #projects_list .project .text{float:left;width:460px}
-#container #contacts input[type="text"]{width:200px}
+#container #contacts input[type='text']{width:200px}
 #container #contacts textarea{width:350px;height:150px}
 #container #contacts .left{width:368px;float:left;margin-right:20px}
 #container #contacts .right{width:386px;float:left}
 #container #projects{width:400px;float:left;margin-right:20px;}
 #container #projects #demos{display:block;width:400px;height:230px;background:#fff;border:1px solid #f2f2f2;}
-#container #projects #demos img{margin-top:20px;background:rgba(0,0,0,0.05);-webkit-box-shadow:0 0 8px rgba(0,0,0,0.296875);-moz-box-shadow:0 0 8px rgba(0,0,0,0.296875);box-shadow:0 0 8px rgba(0,0,0,0.296875);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;height:180px}
+#container #projects #demos img{margin-top:20px;background:rgba(0,0,0,0.05);-webkit-box-shadow:0 0 8px rgba(0,0,0,0.297);-moz-box-shadow:0 0 8px rgba(0,0,0,0.297);box-shadow:0 0 8px rgba(0,0,0,0.297);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;height:180px}
 #container #projects #demos .text{padding:10px}
 #container #projects #demos li{height:190px}
 #container #aboutme #description{width:360px;float:left;}

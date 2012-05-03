@@ -74,8 +74,14 @@ $(function() {
     var email = $('#contact_email');
     var message = $('#contact_message');
     $.post('/contacts', "contact[name]='" + escape(name.val()) + "'&contact[email]='" + email.val() + "'&contact[message]='" + escape(message.val()) + "'", function(data){
-      $('#container').prepend("<h2 class='notification' style='color:red;'>" + data + "</h2>");
-      window.setTimeout(function() { $('.notification').slideUp(300).remove(); }, 3000);
+      $('#container').prepend("<h2 class='notification' style='color:red;display:none;'>" + data + "</h2>");
+      $('#container .notification').slideDown(300);
+      $('#contact_name').val('');
+      $('#contact_email').val('');
+      $('#contact_message').val('');
+      window.setTimeout(function() { 
+        $('.notification').slideUp(300).remove();
+      }, 3000);
     });
     return false;
   });

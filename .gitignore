@@ -1,5 +1,9 @@
 .monitor
 nodemon-ignore
+<<<<<<< HEAD
 config/settings.js
 node_modules/
 public/stylesheets/
+=======
+modules/*
+>>>>>>> 74be6df40bbb39768ae72cdc03c5fbdde9ed1426

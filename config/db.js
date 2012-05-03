@@ -7,7 +7,7 @@ module.exports = function(app) {
   });
 
   app.configure('test', function() {
-    app.set('db-uri', 'mongodb://admin:201287ali@flame.local.mongohq.com:27021/oivoodoo');
+    app.set('db-uri', 'mongodb://localhost/scores-test');
   });
 
   app.configure('production', function() {

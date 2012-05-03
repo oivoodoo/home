@@ -1,4 +1,6 @@
 var nodemailer = require('nodemailer');
+var sys = require ('sys');
+
 
 module.exports = function(app) {
   var Post = app.Post
@@ -32,3 +34,4 @@ module.exports = function(app) {
     res.send('Message is sent!');
   });
 };
+
