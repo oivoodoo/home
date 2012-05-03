@@ -10,7 +10,7 @@ module.exports = function(app) {
   });
 
   app.get('/top/json', function(req, res) {
-    var scores = Score.find({}, function(err, scores) {
+    var scores = Score.find().limit(13).sort('scores', -1).run(function(err, scores) {
       res.header("Access-Control-Allow-Origin", "*");
       if (!!scores) {
         res.send(scores.map(function(s){
@@ -19,12 +19,12 @@ module.exports = function(app) {
       } else {
         res.send("-ERR");
       }
-    }).limit(13).sort('scores', -1);
+    });
   });
 
   app.get('/top', function(req, res) {
-    Score.find({}, function(err, scores) {
+    Score.find().limit(300).sort('scores', -1).run(function(err, scores) {
       res.render('top', { scores: scores });
-    }).limit(300).sort('scores', -1);
+    });
   });
 };
