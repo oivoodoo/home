@@ -2,3 +2,4 @@
 nodemon-ignore
 config/settings.js
 node_modules/
+public/stylesheets/
