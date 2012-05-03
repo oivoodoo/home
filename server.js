@@ -1,6 +1,4 @@
-require.paths.unshift('./modules/');
-
-var sys = require('sys')
+var util = require('util')
     , express = require('express')
     , jade = require('jade')
     , connect = require('connect')

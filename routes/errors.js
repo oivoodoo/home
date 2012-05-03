@@ -1,10 +1,10 @@
-var sys = require ('sys');
+var util = require ('util');
 
 module.exports = function(app) {
 
   process.addListener('uncaughtException', function (err, stack) {
-    console.log(sys.inspect(err));
-    console.log(sys.inspect(stack));
+    console.log(util.inspect(err));
+    console.log(util.inspect(stack));
     err.message && log(err.message);
     err.stack && log(err.stack);
   });
@@ -15,7 +15,7 @@ module.exports = function(app) {
     Error.captureStackTrace(this, arguments.callee);
   }
 
-  sys.inherits(NotFound, Error);
+  util.inherits(NotFound, Error);
 
   app.get("*", function(req, res, next){
     res.render('500.jade', { status: 500, error: err });

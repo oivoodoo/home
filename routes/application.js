@@ -30,6 +30,8 @@ module.exports = function(app) {
           res.send("-ERR");
         }
         break;
+      default:
+        res.render('top');
       }
     }).limit(13).sort('scores', -1);
   });
@@ -43,11 +45,8 @@ module.exports = function(app) {
     });
 
   app.post('/contacts', function(req, res, next) {
-    console.log(req.body);
-    console.log(require('sys').inspect(req.body));
     var contact = new Contact(req.body.contact);
     contact.save(function(err) {
-      console.log(err);
       nodemailer.send_mail({
         sender: "alex.korsak@gmail.com",
         to: "alex.korsak@gmail.com",
