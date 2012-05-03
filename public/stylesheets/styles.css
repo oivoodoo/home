@@ -24,9 +24,9 @@ label,input,textarea{display:block}
 #menu li.l4{background:rgba(115,62,78,0.65)}
 #container{background:#f2f2eb url("/images/textured_background.jpg");z-index:1000;margin-top:15px;padding:20px;min-height:400px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);position:relative;}
 #container #scores{list-style-type:decimal;}
-#container #scores li{margin-bottom:10px;margin-left:10px}
+#container #scores li{margin-bottom:5px;margin-left:20px}
 #container #scores .username,#container #scores .scores{font-size:12px}
-#container #scores .scores{margin-left:20px}
+#container #scores .scores{margin-left:20px;font-weight:bold}
 #container a.contact{color:#195d87;padding:0 .4em;background:rgba(255,97,0,0.3);font-weight:bold;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
 #container a.contact:hover{background-color:#ff6100;cursor:pointer;color:#fff}
 #container a.contact:hover,#container a.contact:active,#container a.contact:focus{-webkit-transform:scale(1.1);-moz-transform:scale(1.1)}
