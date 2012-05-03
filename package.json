@@ -1,0 +1,29 @@
+{
+  "name": "home",
+  "description": "oivoodoo Home Page",
+  "version": "0.0.1",
+  "author": "Alexander Korsak <alex.korsak@gmail.com>",
+  "contributors": [
+    { "name": "Alexander Korsak", "email": "alex.korsak@gmail.com" }
+  ],
+  "dependencies": {
+    "express": "2.5.9",
+    "express-messages": "",
+    "connect": "",
+    "jade": "",
+    "mongoose": "",
+    "connect-mongodb": "",
+    "connect-assetmanager": "",
+    "connect-assetmanager-handlers": "",
+    "nodemailer": "",
+    "stylus": "",
+    "date-utils": ""
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "repository": "git://github.com/oivoodoo/home",
+  "main": "index",
+  "engines": { "node":">= 0.4.0 < 0.7.0" }
+}
