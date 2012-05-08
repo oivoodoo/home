@@ -3,7 +3,7 @@ module.exports = function(app) {
 
   app.post('/create', function(req, res) {
     var score = new Score(req.body.score);
-    if (score.scores < 35000) { // magic number for saving scores
+    if (score.scores > 0 || score.scores < 35000) { // magic number for saving scores
       score.save(function(err) {
         if (err) return next(err);
       });
