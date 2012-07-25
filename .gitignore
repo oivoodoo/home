@@ -5,4 +5,4 @@ node_modules/
 public/stylesheets/
 modules/*
 config/deployments.yml
-
+public/version.txt
