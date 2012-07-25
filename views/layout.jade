@@ -31,9 +31,12 @@ html
             li.l4
               a(href='/contacts') Contacts
 
+          #gittip
+            != "<iframe style='border: 0; margin: 0; padding: 0;' src='https://www.gittip.com/oivoodoo/widget.html' width='48pt' height='20pt'></iframe>"
+
           #plus
             != "<g:plusone></g:plusone>"
-            
+
             script(type="text/javascript")
               (function() {
                 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -57,4 +60,6 @@ html
             li#email
               a(href='mailto:alex.korsak@gmail.com', title='Contacts me')
                 strong Email
+
   != helper.scripts(assets)
+
