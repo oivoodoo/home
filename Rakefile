@@ -1,1 +1,3 @@
- load "#{Gem.searcher.find('deployments').full_gem_path}/lib/tasks/deployments.rake"
+#!/usr/bin/env rake
+
+load "#{Gem.searcher.find('deployments').full_gem_path}/lib/tasks/deployments.rake"

@@ -30,7 +30,7 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     posix-spawn (0.3.6)
-    simple-conf (0.0.3)
+    simple-conf (0.0.4)
     versionomy (0.4.4)
       blockenspiel (>= 0.4.5)
 
