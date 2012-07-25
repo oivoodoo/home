@@ -26,8 +26,8 @@ module.exports = function(app) {
 
   app.get('/top', function(req, res) {
     Score.find().limit(800).sort('scores', -1).run(function(err, scores) {
-      var total = Score.count().run(function(err, scores) {
-        res.render('top', { scores: scores, total_scores: total });
+      Score.count().run(function(err, scores) {
+        res.render('top', { scores: scores, total: total });
       });
     });
   });
