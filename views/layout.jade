@@ -31,11 +31,12 @@ html
             li.l4
               a(href='/contacts') Contacts
 
-          #gittip
-            != "<iframe style='border: 0; margin: 0; padding: 0;' src='https://www.gittip.com/oivoodoo/widget.html' width='48pt' height='20pt'></iframe>"
-
-          #plus
-            != "<g:plusone></g:plusone>"
+          #buttons
+            span#plus
+              != "<g:plusone></g:plusone>"
+            span#gittip
+              != "<iframe style='border: 0; margin: 0; padding: 0;' src='https://www.gittip.com/oivoodoo/widget.html' width='48pt' height='20pt'></iframe>"
+          div(style = 'clear: both; font-size: 1px; height: 1px;') &nbsp;
 
             script(type="text/javascript")
               (function() {

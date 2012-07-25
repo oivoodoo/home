@@ -14,8 +14,9 @@ label,input,textarea{display:block}
 #page{margin:0 auto;padding:20px}
 #page_inner{margin:0 auto;width:820px}
 #menu{width:100%;position:relative;top:15px;z-index:80;}
-#menu #plus{padding-top:16px;float:right;width:70px}
-#menu #gittip{padding-top:18px;width:40px;float:right}
+#menu #buttons{float:right;padding-top:16px;}
+#menu #buttons #plus{width:65px;float:right}
+#menu #buttons #gittip{width:40px;margin-right:5px;float:right}
 #menu li{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);box-shadow:0 0 10px rgba(0,0,0,0.5);width:60px;overflow:hidden;margin:10px 10px 10px 0;padding:5px;float:left;text-align:center;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
 #menu li:hover{-webkit-transform:scale(1.1);-moz-transform:scale(1.1)}
 #menu li a{color:#fff;text-decoration:none;display:block;padding:5px 0;width:100%}
