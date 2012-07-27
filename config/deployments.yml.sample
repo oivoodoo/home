@@ -1,0 +1,6 @@
+options:
+  server: "deployments.server.example.com"
+production:
+  domain: "example.com"
+  api_key: "key"
+
