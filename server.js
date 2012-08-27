@@ -36,6 +36,14 @@ app.configure(function() {
 app.config = config;
 app.mongoose = mongoose;
 
+app.mailer = require('nodemailer').createTransport("SMTP", {
+  service: "Gmail",
+  auth: {
+    user: process.env.SETTINGS_EMAIL,
+    pass: process.env.SETTINGS_PASSWORD
+  }
+});
+
 require('./config/db')(app);
 require('./models')(app);
 require('./routes')(app);

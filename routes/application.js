@@ -1,7 +1,6 @@
 var nodemailer = require('nodemailer');
 var sys = require ('sys');
 
-
 module.exports = function(app) {
   var Post = app.Post
       , Contact = app.Contact;
@@ -21,14 +20,17 @@ module.exports = function(app) {
   app.post('/contacts', function(req, res, next) {
     var contact = new Contact(req.body.contact);
     contact.save(function(err) {
-      nodemailer.send_mail({
-        sender: "alex.korsak@gmail.com",
-        to: "alex.korsak@gmail.com",
-        subject: "(Home Site) Someone contact you",
-        html: 'Email: ' + contact.email + '<br />Name: ' + contact.name + '<br/>Message:<br/>' + contact.message
-      }, function(error, success) {
-        console.log("Message "+(success ? "sent" : "failed"));
-      });
+      console.log(err);
+    });
+
+    app.mailer.sendMail({
+      from: "alex.korsak@gmail.com",
+      to: "alex.korsak@gmail.com",
+      subject: "(Home Site) Someone contact you",
+      html: 'Email: ' + contact.email + '<br />Name: ' + contact.name + '<br/>Message:<br/>' + contact.message
+    }, function(error, success) {
+      console.log(error);
+      console.log("Message " + (success ? "sent" : "failed"));
     });
 
     res.send('Message is sent!');
