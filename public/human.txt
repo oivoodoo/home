@@ -1,0 +1,12 @@
+/* TEAM */
+Your title: Alexander Korsak
+Site: alex.korsak@gmail.com, http://oivoodoo.no.de/
+Twitter: http://twitter.com/oivoodoo/
+Blog: http://oivoodoo.tumblr.com/
+
+/* SITE */
+Last update: YYYY/MM/DD
+Standards: HTML5, CSS3, Javascript, Ruby
+Components: Twitter Boostrap, jQuery, Sinatra
+Software: Alexander Korsak Home Page
+
