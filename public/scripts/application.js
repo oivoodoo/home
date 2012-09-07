@@ -1,15 +1,7 @@
 $(function() {
-  
-  function load_home_page() { 
-    $('#projects #demos').Horinaja({
-      capture:'demos',
-      delai:0.3,
-      duree:4,
-      pagination:true
-    });
-    
+  function load_home_page() {
     $('#projects #demos li').css('display', 'block');
-    
+
     $.getJSON('http://search.twitter.com/search.json?callback=?&q=oivoodoo&rpp=5', function(data){
       var html = "";
       for(var i = 0; i < data.results.length; i++) {
@@ -20,7 +12,7 @@ $(function() {
       $('#container #twitter').append(html);
       $('#container #twitter .tweet').slideDown(300);
     });
-    
+
     $.getJSON('http://oivoodoo.tumblr.com/api/read/json?callback=?', function(data){
       var html = "";
       var MAX = 5;
@@ -41,9 +33,9 @@ $(function() {
       $('#container #tumblr').find('.loading').remove();
       $('#container #tumblr').append(html);
       $('#container #tumblr .post').slideDown(300);
-    });  
+    });
   }
-  
+
   $('#menu .l1').click(function() {
     $('#container').html('').append("<img class='loading' src='/images/loading.gif'/>");
     $.get('/', function(data) {
@@ -52,7 +44,7 @@ $(function() {
     });
     return false;
   });
-  
+
   $('#menu .l3').click(function() {
     $('#container').html('').append("<img class='loading' src='/images/loading.gif'/>");
     $.get('/projects', function(data) {
@@ -60,7 +52,7 @@ $(function() {
     });
     return false;
   });
-  
+
   $('#menu .l4, .contact_button').live('click', function() {
     $('#container').html('').append("<img class='loading' src='/images/loading.gif'/>");
     $.get('/contacts', function(data) {
@@ -68,7 +60,7 @@ $(function() {
     });
     return false;
   });
-  
+
   $('#send_button').live('click', function() {
     var name = $('#contact_name');
     var email = $('#contact_email');
@@ -79,12 +71,12 @@ $(function() {
       $('#contact_name').val('');
       $('#contact_email').val('');
       $('#contact_message').val('');
-      window.setTimeout(function() { 
+      window.setTimeout(function() {
         $('.notification').slideUp(300).remove();
       }, 3000);
     });
     return false;
   });
-  
+
   load_home_page();
 });

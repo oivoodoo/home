@@ -10,7 +10,6 @@ var assetsConfig = {
       , 'dataType': 'javascript'
       , 'files': [
         'jquery.min.js'
-        , 'class.horinaja.jquery.js'
         , 'application.js'
       ]
       , 'postManipulate': {
@@ -27,8 +26,8 @@ function compile(str, path) {
     .set('compress', true);
 };
 
-exports.config = { 
-  assets: { 
+exports.config = {
+  assets: {
     handler: assetManager(assetsConfig)
     , compile: compile
   },
