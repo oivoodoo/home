@@ -17,7 +17,8 @@
     "connect-assetmanager-handlers": "",
     "nodemailer": "",
     "stylus": "",
-    "date-utils": ""
+    "date-utils": "",
+    "validator": ""
   },
   "devDependencies": {
     "mocha": "*",
