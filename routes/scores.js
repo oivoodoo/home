@@ -5,7 +5,7 @@ module.exports = function(app) {
 
   app.post('/create', function(req, res) {
     var scores = sanitize(req.body.score.scores).xss().replace(/\[removed\]/g, '');
-    var username = req.body.score.username;
+    var username = sanitize(req.body.score.username).xss().replace(/\[removed\]/g, '');
 
     var hash = { scores: scores, username: username };
 
