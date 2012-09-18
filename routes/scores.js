@@ -4,7 +4,12 @@ module.exports = function(app) {
   var Score = app.Score;
 
   app.post('/create', function(req, res) {
-    var score = new Score(req.body.score);
+    var scores = sanitize(req.body.score.scores).xss().replace(/\[removed\]/g, '');
+    var username = req.body.score.username;
+
+    var hash = { scores: scores, username: username };
+
+    var score = new Score(hash);
     if (score.scores > 0 || score.scores < 35000) { // magic number for saving scores
       score.save(function(err) {
         if (err) return next(err);
@@ -27,14 +32,9 @@ module.exports = function(app) {
   });
 
   app.get('/top', function(req, res) {
-    Score.find().limit(800).sort('scores', -1).run(function(err, data) {
-      var scores = sanitize(data.scores).xss().replace(/\[removed\]/g, '');
-      var username = scores.username;
-
-      var hash = { scores: scores, username: username };
-
+    Score.find().limit(800).sort('scores', -1).run(function(err, scores) {
       Score.count().run(function(err, total) {
-        res.render('top', { scores: hash, total: total });
+        res.render('top', { scores: scores, total: total });
       });
     });
   });
