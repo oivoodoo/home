@@ -27,12 +27,14 @@ module.exports = function(app) {
   });
 
   app.get('/top', function(req, res) {
-    Score.find().limit(800).sort('scores', -1).run(function(err, scores) {
-      var scores = sanitize(scores.scores).xss().replace(/\[removed\]/g, '');
-      scores.scores = scores;
+    Score.find().limit(800).sort('scores', -1).run(function(err, data) {
+      var scores = sanitize(data.scores).xss().replace(/\[removed\]/g, '');
+      var username = scores.username;
+
+      var hash = { scores: scores, username: username };
 
       Score.count().run(function(err, total) {
-        res.render('top', { scores: scores, total: total });
+        res.render('top', { scores: hash, total: total });
       });
     });
   });
