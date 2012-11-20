@@ -1,5 +1,5 @@
 var util = require('util')
-    , express = require('express');
+    , express = require('express')
     , jade = require('jade')
     , connect = require('connect')
     , mongoose = require('mongoose')
