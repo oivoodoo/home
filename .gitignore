@@ -1,7 +1,6 @@
 .monitor
 nodemon-ignore
 config/settings.js
-node_modules/
 public/stylesheets/
 modules/*
 config/deployments.yml
