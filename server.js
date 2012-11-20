@@ -23,6 +23,10 @@ var app = module.exports = express.createServer(
     // , connect.favicon()
 );
 
+app.get('/', function(req, res) {
+  res.render('text');
+});
+
 // app.configure(function() {
 //   app.set('views', __dirname + '/views');
 //   app.set('view engine', 'jade');
