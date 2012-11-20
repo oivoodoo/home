@@ -6,3 +6,4 @@ public/stylesheets/
 modules/*
 config/deployments.yml
 public/version.txt
+.env

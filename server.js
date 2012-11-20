@@ -1,6 +1,3 @@
-process.env.EXPRESS_ENV = 'production';
-process.env.NODE_ENV = 'production';
-
 var util = require('util')
     , express = require('express')
     , jade = require('jade')

@@ -8,17 +8,17 @@
   ],
   "dependencies": {
     "express": "2.5.9",
-    "express-messages": "",
-    "connect": "",
-    "jade": "",
-    "mongoose": "",
-    "connect-mongodb": "",
-    "connect-assetmanager": "",
-    "connect-assetmanager-handlers": "",
-    "nodemailer": "",
-    "stylus": "",
-    "date-utils": "",
-    "validator": ""
+    "express-messages": "0.0.2",
+    "connect": "2.2.1",
+    "jade": "0.25.0",
+    "mongoose": "2.6.0",
+    "connect-mongodb": "1.1.3",
+    "connect-assetmanager": "0.0.27",
+    "connect-assetmanager-handlers": "0.0.18",
+    "nodemailer": "0.3.19",
+    "stylus": "0.26.0",
+    "date-utils": "1.2.10",
+    "validator": "0.4.11"
   },
   "devDependencies": {
     "mocha": "*",
