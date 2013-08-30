@@ -5,8 +5,6 @@ module.exports = function(app) {
   process.addListener('uncaughtException', function (err, stack) {
     console.log(util.inspect(err));
     console.log(util.inspect(stack));
-    err.message && log(err.message);
-    err.stack && log(err.stack);
   });
 
   function NotFound(msg) {
